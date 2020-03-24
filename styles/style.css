@@ -1,0 +1,1014 @@
+/* 
+Global Settings
+Sizing, Spacing & Containers
+Typography
+Tables
+Interactive Elements
+Miscellaneous
+Page Sections 
+    Intro
+    Work
+    Skills
+    Navigation
+    Competitive Analysis
+    Colors
+    Personas
+    Project Details
+    Logos & Icons
+    Contact
+    Footer
+*/
+
+/* --------------------------------------------- Global Settings ---------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+    --coral-lightest: #FF5A5A;
+    --coral-base: #FF3F3F;
+    --coral-darkest: #E60000;
+
+    --malibu-darkest: #6DDCFF;
+    --malibu-base: #A4E9FF;
+    --malibu-lightest: #C3F1FF;
+
+    --grey-lightest: #F4F4F4;
+    --grey-lighter: #BFBFBF;
+    --grey-base: #6E6E6E;
+    --grey-darker: #505050;
+    --grey-darkest: #171717;
+
+    --gradient-1: linear-gradient(156.2deg, #FFFFFF 9.18%, rgba(241, 241, 241, 0.814018) 29.45%, rgba(233, 233, 233, 0.416667) 54.47%, #F7F7F7 74.31%);
+    --gradient-2: linear-gradient(156.13deg, #FAFAFA 9.18%, rgba(249, 249, 249, 0.814018) 22.55%, rgba(244, 244, 244, 0.416667) 54.47%, #F7F7F7 91.99%);
+    
+    color: var(--grey-darkest); 
+
+    font-family: 'DM Sans', sans-serif;
+}
+
+::selection {
+    background: rgb(3, 105, 201);
+    color: white;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* --------------------------------------------- Sizing, Spacing & Containers ---------------------------------------------*/
+
+img {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 64px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.sizing {
+    margin: 0 24px;
+    max-width: 592px;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.sizing--wide {
+    max-width: 1200px;
+}
+
+canvas {
+     margin: 0 auto;
+     max-width: 592px;
+}
+
+.container-canvas {
+    margin: 0 24px 32px;
+}
+
+
+.hero {
+    position: relative;
+    margin-top: -64px;
+}
+
+.hero_title {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .hero_title {
+        bottom: 25%;
+        display: block;
+        left: 8%;
+        max-width: 20%;
+        position: absolute;
+    }
+
+    .project_title {
+        display: none;
+    }
+}
+
+.full-column {
+    width: 998px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+    section {
+        margin-bottom: 96px;
+    }
+}
+
+.about {
+    max-width: 592px;
+}
+
+.project_title h1 {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.project_title h2 {
+    margin-top: -16px;
+    font-size: 27px; /* Force size during 600px - 900px media query gap */
+}
+
+.spacer-top-32px {
+    margin-top: 32px;
+}
+
+.background--grey {
+    background: var(--gradient-1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+    padding: 32px 0;
+    width: 100%;
+}
+
+.background--grey img {
+    max-width: 600px;
+}
+
+.background--grey div {
+    margin: 0 24px;
+}
+
+.comparison {
+    background: var(--gradient-2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 32px 0;
+    padding: 32px 0;
+}
+
+
+.comparison div {
+        margin: 16px 24px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 1000px) {
+    .comparison div {
+        max-width: 440px;
+    }
+}
+
+.full {
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.partial {
+    margin: 32px 0;
+}
+
+.margin-extra {
+    margin: 48px 24px 64px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .full {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.index section {
+    margin-bottom: 128px;
+}
+
+.original-size {
+    width: initial;
+}
+
+
+
+/* --------------------------------------------- Typography ---------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p, address, li {
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: 0.05px;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    line-height: 1.3em;
+    margin-bottom: 8px;
+}
+
+.list--bulleted li::before {
+   content: "·";
+   font-weight: 700;
+   margin-right: -3px;
+   position: relative;
+   right: 8px;
+}
+
+.larger {
+    font-size: 63px;
+    font-weight: 500;
+    line-height: 0.9;
+    margin: 0 0 32px;
+    letter-spacing: -0.1px;
+}
+
+.smaller {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 42px;
+    margin-bottom: 32px;
+    letter-spacing: 0.1px;
+}
+
+.smallest {
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: 0.1px;
+}
+
+.body_two {
+    font-size: 15px;
+}
+
+
+@media screen and (min-width: 600px) {
+    p, address, li {
+        font-size: 20px;
+    }
+
+    .smallest {
+        font-size: 47px;
+    }
+
+    .larger {
+        font-size: 84px;
+    }
+}
+
+.paragraph_description {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 4px;
+}
+
+@media screen and (min-width: 600px) {
+    .paragraph_description {
+        font-size: 22px;
+    }
+}
+
+.overline {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.graph__title {
+    color: var(--grey-base);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.text--highlight {
+    color: var(--coral-base);
+    margin-right: 4px;
+}
+
+/* --------------------------------------------- Interactive Elements ---------------------------------------------*/
+
+a {
+    color: var(--coral-darkest);
+    text-decoration: none;
+}
+
+a.button {
+    background-color: var(--coral-base);
+    border: 1px solid var(--coral-base);
+    color: white;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    transition: background-color 0.4s ease;
+}
+
+a.button:hover {
+    background: var(--coral-lightest);
+}
+
+a.button:first-of-type{
+    margin-right: 32px;
+}
+
+a.button--secondary {
+    background: white;
+    border: 1px solid var(--grey-darkest);
+    color: var(--grey-darkest);
+}
+
+a.button--secondary:hover {
+    background: var(--grey-lightest);
+}
+
+.personas__buttons button{
+    background-color: var(--coral-base);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: 0.2s ease;
+    width: 100%;
+}
+
+.personas__buttons button.inactive {
+    background-color: var(--grey-lightest);
+    color: var(--grey-darkest);
+}
+
+.personas__buttons button.inactive:hover {
+    background: var(--coral-base);
+    color: white;
+}
+
+/* --------------------------------------------- Tables ---------------------------------------------*/
+
+table {
+  border-collapse: collapse;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  margin-top: 32px;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+    text-align: left;
+}
+
+td {
+    overflow: hidden;
+    padding: 16px 4px;
+    vertical-align: top;
+}
+
+table td:last-child {
+    text-align: center;
+}
+
+th {
+    padding: 16px, 4px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+thead {
+    color: var(--grey-darker);
+}
+
+thead th:last-child {
+    text-align: center;
+    width: 90px;
+}
+
+thead th:first-child {
+    width: 100px;
+}
+
+tr { 
+  border: solid var(--grey-lighter);
+  border-width: 1px 0;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+.cell--medium-priority {
+    background: var(--malibu-base);
+}
+
+.cell--low-priority {
+    background: var(--malibu-lightest);
+}
+
+.cell--high-priority {
+    background: var(--malibu-darkest);
+}
+
+@media screen and (min-width: 600px) {
+    table {
+        margin-top: 64px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    table {
+        font-size: 13px !important;
+    }
+}
+
+/* --------------------------------------------- Miscellaneous---------------------------------------------*/
+
+.tooltip {
+    background-color: var(--grey-darkest);
+    border: red;
+    border-radius: 2px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 8px 6px;
+    position: fixed;
+}
+
+.tooltip::after {
+    border-color: transparent var(--grey-darkest) transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    content: "";
+    margin-top: -5px;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+}
+
+/* --------------------------------------------- Sections: Intro ---------------------------------------------*/
+
+.intro {
+    max-width: 592px;
+}
+
+.intro h1 {
+    font-weight: 500;
+    line-height: 1;
+    max-width: 300px;
+}
+
+.intro h2 {
+    font-weight: 400;
+}
+
+@media screen and (min-width: 600px) {
+    .intro {
+        margin-left: 100px;
+    }
+
+    .intro h1 {
+        font-size: 47px;
+        max-width: 400px;
+    }
+
+    .intro h2 {
+        font-size: 35px;
+    }
+}
+
+
+/* --------------------------------------------- Sections: Work ---------------------------------------------*/
+
+.work {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.work .button {
+    margin-top: -4px;
+}
+
+.work h4 {
+    font-weight: 400;
+}
+
+.work h3 {
+    margin: 16px 0 0 0;
+}
+
+@media screen and (min-width: 600px) {
+    .work h4 {
+        font-size: 35px;
+    }
+}
+
+/* --------------------------------------------- Sections: Skills ---------------------------------------------*/
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -32px;
+    margin-top: 32px;
+}
+
+.skills div {
+    flex-basis: 50%;
+    margin-bottom: 32px;
+}
+
+.skills h3 {
+    font-size: 20px;
+}
+
+@media screen and (min-width: 780px) {
+    .skills div {
+        flex-basis: content;
+    }
+
+    .skills h3 {
+        font-size: 27px;
+    }
+}
+
+/* --------------------------------------------- Sections: Navigation ---------------------------------------------*/
+
+nav {
+    align-items: center;
+    display: flex;
+    height: 128px;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+nav a {
+    color: var(--grey-darkest);
+    font-size: 15px;
+}
+
+nav div a {
+     margin-left: 32px;
+}
+
+@media screen and (min-width: 600px) {
+    nav a {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+/* --------------------------------------------- Competitive Analysis ---------------------------------------------*/
+
+.competitive_analysis {
+    margin: 64px 0;
+}
+
+.competitive_analysis img {
+    width: 200px;
+    margin-bottom: 8px;
+}
+
+.competitive_analysis:last-of-type {
+    margin-bottom: 0;
+}
+
+.competitive_analysis > ul {
+    margin: 32px 0;
+}
+
+@media screen and (min-width: 600px) {
+    .competitive_analysis img {
+        width: 248px;
+    }
+}
+
+
+/* --------------------------------------------- Section Colors ---------------------------------------------*/
+
+.colors__grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.colors span {
+    align-items:flex-end;
+    display: flex;
+    height: 100px;
+}
+
+.colors span div {
+    background: white;
+    height: 46px;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.colors span p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.colors p:last-child {
+    color: var(--grey-darker);
+    margin-top: -4px;
+}
+
+.colors span:nth-child(-n+5) {
+    grid-column: span 2;
+}
+
+.colors span:nth-of-type(1) {
+    background: #1BBFFC;
+}
+
+.colors span:nth-of-type(2) {
+    background: #4353E9;
+}
+
+.colors span:nth-of-type(3) {
+    background: #3529BF;
+}
+
+.colors span:nth-of-type(4) {
+    background: #FF4117;
+}
+
+.colors span:nth-of-type(5) {
+    background: #EF005F;
+}
+
+.colors span:nth-of-type(6) {
+    background: #A8AFC8;
+}
+
+.colors span:nth-of-type(7) {
+    background: #D6D8E4;
+}
+
+.colors span:nth-of-type(8) {
+    background: #E3E5ED;
+}
+
+.colors span:nth-of-type(9) {
+    background: #465470;
+}
+
+.colors span:nth-of-type(10) {
+    background: #21262F;
+}
+
+@media screen and (min-width: 600px) {
+    .colors__grid  {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* --------------------------------------------- Sections: Personas ---------------------------------------------*/
+
+.persona {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto min-content ;
+    width: 100%;
+    grid-template-areas: "name   name    photo  photo"
+                         "quote  quote   photo  photo"
+                         "info   info    photo  photo"
+                         "bio    bio     bio    bio"
+                         "moti   moti    moti   moti"
+                         "goals  goals   frust  frust ";
+}
+
+@media screen and (min-width: 600px) {
+    .persona {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:  "name   name    photo  photo  photo   photo"
+                              "quote  quote   photo  photo  photo   photo"
+                              "info   info    photo  photo  photo   photo"
+                              "bio    bio     bio    bio    goals   goals"
+                              "moti   moti    moti   moti   frust   frust";
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .persona .smaller {
+        font-size: 27px;
+    }
+
+    .info ul li {
+        font-size: 13px;
+    }
+}
+
+.personas__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 64px 0 32px 0;
+}
+
+.persona blockquote {
+    color: var(--grey-darker);
+    font-style: italic;
+    grid-area: quote;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.persona blockquote::before {
+    content: '“';
+    margin-right: -3px;
+    position: relative;
+    right: 4px;
+}
+
+.persona blockquote::after {
+    content: '”';
+}
+
+.persona img {
+    grid-area: photo;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.persona li {
+    font-size: 15px;
+}
+
+.persona p, .persona h5 {
+    margin: 0;
+}
+
+.bio {
+    grid-area: bio;
+}
+
+.frust {
+    grid-area: frust;
+}
+
+.goals {
+    grid-area: goals;
+}
+
+.info {
+    display: flex;
+    grid-area: info;
+    justify-content: space-between;
+}
+
+.info ul:first-child {
+    color: var(--grey-base);
+}
+
+.moti {
+    grid-area: moti;
+}
+
+.name {
+    grid-area: name;
+}
+
+.name p {
+    color: var(--grey-darker);
+}
+
+/* --------------------------------------------- Sections: Project Details ---------------------------------------------*/
+
+.project-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-details li {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.details--whole {
+    flex-basis: 100%;
+}
+
+.details--half {
+    display: flex;
+    flex-basis: 50%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.details--quarter {  
+    flex-basis: 50%;
+}
+
+@media screen and (min-width:600px) {
+    .details--quarter {
+        flex-basis: 25%;
+        white-space: nowrap;
+    }
+
+    .details--whole {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .project-details li {
+        font-size: 13px;
+    }
+}
+
+/* --------------------------------------------- Sections: Logos & Icons ---------------------------------------------*/
+
+.container-logo {
+    width: 100%;
+    background: black;
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container-logo img {
+    width: 390px;
+    margin: 0 24px;
+}
+
+.container-logo:first-child {
+    background: white;
+    margin-top: 16px;
+}
+
+.logo {
+    width: 48px;
+}
+
+.icons {
+    display: flex;
+    flex-flow: wrap;
+    margin: 32px auto 0;
+    max-width: 640px;
+}
+
+.icons img {
+    flex: 1 0 16%;
+    margin-bottom: 32px;
+    max-height: 48px;
+}
+
+/* --------------------------------------------- Sections: Contact ---------------------------------------------*/
+
+address {
+    margin-top: -8px;
+}
+
+address a{
+    color: var(--coral-darkest);
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.contact {
+    max-width: 217px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    .contact {
+        max-width: 328px;
+    }
+
+    .contact a {
+        font-size: 27px;
+    }
+
+    .contact h2 {
+    font-weight: 500;
+    font-size: 63px;
+    line-height: 0.9;
+    margin: 64px 0 32px;
+    }
+}
+
+/* --------------------------------------------- Sections: Footer ---------------------------------------------*/
+
+footer {
+    align-items: center;
+    background: var(--grey-darkest);
+    color: var(--grey-lightest);
+    display: flex;
+    height: 192px;
+}
+
+footer a  {
+    color: white;
+}
+
+footer small {
+    display: block;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-top: 32px;
+    max-width: 256px;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: column;
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        height: 92px;
+    }
+
+    footer ul {
+        flex-flow: row;
+        order: 2;
+    }
+    
+    footer li {
+        margin: 0 0 0 64px;
+    }
+
+    footer div {
+        align-items: center;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    footer small {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+/* These slyest page arrangments? (9, 5, 6) */
