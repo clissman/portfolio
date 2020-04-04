@@ -26,7 +26,7 @@ Page Sections
 :root {
     --coral-lightest: #FF5A5A;
     --coral-base: #FF3F3F;
-    --coral-darkest: #E60000;
+    --coral-darkest: #E60000; 
 
     --malibu-darkest: #6DDCFF;
     --malibu-base: #A4E9FF;
@@ -335,6 +335,9 @@ li {
 
 .text--highlight {
     color: var(--coral-base);
+}
+
+.spacer--right {
     margin-right: 4px;
 }
 
@@ -359,7 +362,7 @@ a.button {
 }
 
 a.button:hover {
-    background: var(--coral-lightest);
+    background: var(--coral-darkest);
 }
 
 a.button:first-of-type{
@@ -422,7 +425,7 @@ table td:last-child {
 }
 
 th {
-    padding: 16px, 4px;
+    padding: 16px 4px;
     text-align: left;
     white-space: nowrap;
 }
@@ -505,7 +508,7 @@ tr:last-child {
 /* --------------------------------------------- Sections: Intro ---------------------------------------------*/
 
 .intro {
-    max-width: 592px;
+    max-width: 654px;
 }
 
 .intro h1 {
@@ -589,14 +592,32 @@ tr:last-child {
     }
 }
 
+
 /* --------------------------------------------- Sections: Navigation ---------------------------------------------*/
+
+main {
+    margin-top: 192px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+
 
 nav {
     align-items: center;
     display: flex;
     height: 128px;
     justify-content: space-between;
-    margin-bottom: 64px;
+    margin: 0 24px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 nav a {
@@ -604,16 +625,26 @@ nav a {
     font-size: 15px;
 }
 
+.menu {
+    margin-left: 8px;
+}
+
 nav div a {
-     margin-left: 32px;
+     margin-left: 8px;
+     padding: 12px 2px;
 }
 
 @media screen and (min-width: 600px) {
-    nav a {
+    nav div a {
         font-size: 20px;
-        font-weight: 500;
+        padding: 4px;
+        margin-left: 16px;
     }
 }
+
+
+
+
 
 /* --------------------------------------------- Competitive Analysis ---------------------------------------------*/
 
@@ -650,20 +681,20 @@ nav div a {
   width: 100%;
 }
 
-.colors span {
+.colors__grid--color {
     align-items:flex-end;
     display: flex;
     height: 100px;
 }
 
-.colors span div {
+.colors__grid--color div {
     background: white;
     height: 46px;
     padding-top: 8px;
     width: 100%;
 }
 
-.colors span p {
+.colors__grid--color p {
     font-size: 15px;
     margin: 0;
 }
@@ -673,47 +704,47 @@ nav div a {
     margin-top: -4px;
 }
 
-.colors span:nth-child(-n+5) {
+.colors__grid--color:nth-child(-n+5) {
     grid-column: span 2;
 }
 
-.colors span:nth-of-type(1) {
+.colors__grid--color:nth-of-type(1) {
     background: #1BBFFC;
 }
 
-.colors span:nth-of-type(2) {
+.colors__grid--color:nth-of-type(2) {
     background: #4353E9;
 }
 
-.colors span:nth-of-type(3) {
+.colors__grid--color:nth-of-type(3) {
     background: #3529BF;
 }
 
-.colors span:nth-of-type(4) {
+.colors__grid--color:nth-of-type(4) {
     background: #FF4117;
 }
 
-.colors span:nth-of-type(5) {
+.colors__grid--color:nth-of-type(5) {
     background: #EF005F;
 }
 
-.colors span:nth-of-type(6) {
+.colors__grid--color:nth-of-type(6) {
     background: #A8AFC8;
 }
 
-.colors span:nth-of-type(7) {
+.colors__grid--color:nth-of-type(7) {
     background: #D6D8E4;
 }
 
-.colors span:nth-of-type(8) {
+.colors__grid--color:nth-of-type(8) {
     background: #E3E5ED;
 }
 
-.colors span:nth-of-type(9) {
+.colors__grid--color:nth-of-type(9) {
     background: #465470;
 }
 
-.colors span:nth-of-type(10) {
+.colors__grid--color:nth-of-type(10) {
     background: #21262F;
 }
 

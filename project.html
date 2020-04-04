@@ -16,7 +16,6 @@
     <title>Chris Lissman | Cira Case Study</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <script src="scripts/chartjs-plugin-deferred.min.js"></script>
-    <script src="scripts/swipe-listener.min.js"></script>
     <script type="text/javascript" src="scripts/app.js" async></script>
     <link rel="shortcut icon" href="images/logo_favicon.png?v=2" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -24,23 +23,22 @@
 </head>
 <body>
     <header class='container'>
-        <div class="sizing sizing--wide">
-            <nav>
-                <a href="index.html">
-                    <img class="logo" src="images/logo_large.svg" alt="Chris Lissman's logo">
-                </a>
-                <div class='menu'>
-                    <a href="index.html">Work</a>
-                    <a href="chris_lissman_resume.pdf">Resume</a>
-                    <a href="about.html">About</a>
-                </div>
-            </nav>
-        </div>
+        <nav>
+            <a href="index.html">
+                <img class="logo" src="images/logo_large.svg" alt="Chris Lissman's logo">
+            </a>
+            <div class='menu'>
+                <a href="index.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="chris_lissman_resume.pdf" target="_blank" rel="noopener">Resume</a>
+                <a href="mailto:clissmanux@gmail.com" target="_blank" rel="noopener">Contact</a>
+            </div>
+        </nav>
     </header>
     <main class='project'>
         <div class="hero">
             <img class='full' src="images/cira/hero.jpg" alt="Three cellphones showing Cira's sign in screen and file view screens">
-            <img role='banner' class="hero_title" src="images/cira/hero_title.svg" alt="Cira, Cloud Storage for Designers">
+            <img class="hero_title" src="images/cira/hero_title.svg" alt="Cira, Cloud Storage for Designers">
         </div>
         <section>
             <div class="container">
@@ -184,7 +182,7 @@
         <section>
             <div class="container">
                 <div class="sizing">
-                    <h3 class='smallest'>Competitive Analaysis</h3>
+                    <h3 class='smallest'>Competitive Analysis</h3>
                     <p>To learn more about the features people did and didn't like in their current cloud storage, I analyzed the three most
                     popular services found in the user survey with a <a href='https://docs.google.com/document/d/1F159_5qDThcHDVQX1hqBsS9YDDE2Yq5O6mTpV8WCER4/edit?usp=sharing' target="_blank" rel="noopener">competitive analysis</a>. I also mapped out user flows for these products to see how they worked and
                     the logic behind their differences.</p>
@@ -220,7 +218,7 @@
                                 <ul class='list--bulleted'>
                                     <li>Has helpful tooltips</li>
                                     <li>More detailed version control than competitors</li>
-                                    <li>Password protected links with expiration dates</li>
+                                    <li>Password-protected links with expiration dates</li>
                                 </ul>
                             </li>
                         </ul>
@@ -261,7 +259,6 @@
                 </div>
             </div>
             </section>
-        </section>
         <section class='personas'>
             <div class="container">
                 <div class="sizing">
@@ -274,7 +271,7 @@
                         <button class='inactive' onclick="changePersona(this)">Vince</button>
                         <button class='inactive' onclick="changePersona(this)">Luca</button>
                     </div>
-                    <div id="swipe-listener">
+                    <div>
                         <div class='persona' id='wendy'>
                             <div class="name">
                                 <p class='smaller'>Wendy D.</p>
@@ -305,7 +302,7 @@
                             <div class="moti">
                                 <p class='overline title'>Motivation</p>
                                 <p class='body_two'>Wendy uses a variety of different cloud storage services for personal files and work. She’s very fond of OneDrive for
-                                sorting personal photographs because of the automatic tagging, and wishes there were other great organizational features
+                                sorting personal photographs because of the automatic tagging and wishes there were other great organizational features
                                 in cloud storage.</p>
                             </div>
                             <ul class='goals body_two'>
@@ -377,9 +374,9 @@
                                         <li>Can't access Dropbox files through Google Drive</li>
                                         <li>Other cloud storage he uses are very slow</li>
                                         <li>Concerned about the security of important videos<li>
-                                        </ul>
                                     </ul>
                                 </li>
+                            </ul>
                         </div>
                         <div class='persona' id='luca' style='display: none'>
                             <div class="name">
@@ -443,53 +440,72 @@
             <div class="container">
                 <div class="sizing">
                     <h2 class='larger title'>IA</h2>
-                        <h3 class='smallest'>User Research</h3>
-                        <p>I created sixty-four <a href="https://docs.google.com/spreadsheets/d/1zO7dsxPrleQyW40Xi6IRJkos4aw5AWHp8IEssycAb5E/edit?usp=sharing" target="_blank" rel="noopener">user stories</a> with acceptance criteria using the personas and competitive analysis from earlier. I
-                        then prioritized each story to limit scope creep, keeping low priority stories for future use. Twenty-four stories were
-                        high priority and included in both the MVP and low-fidelity prototype.</p>
-                        <table>
-                            <thead>
-                                <tr class='overline title'>
-                                    <th>Task</th>
-                                    <th>User</th>
-                                    <th>Goal</th>
-                                    <th>Priority</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class='high-priority'>
-                                    <td>As a new user</td>
-                                    <td>I want to create an account via email</td>
-                                    <td>So I have an account associated with my files</td>
-                                    <td class='cell--high-priority'>High</td>
-                                </tr>
-                                <tr class='high-priority'>
-                                    <td>As a returning user</td>
-                                    <td>I want to use nested folders</td>
-                                    <td>So I can understand their hierarchy</td>
-                                    <td class='cell--high-priority'>High</td>
-                                </tr>
-                                <tr class='medium-priority'>
-                                    <td>As a returning user</td>
-                                    <td>I want to pin my files or folders</td>
-                                    <td>So I can easily access them</td>
-                                    <td class='cell--medium-priority'>Medium</td>
-                                </tr>
-                                <tr class='low-priority'>
-                                    <td>As a returning user</td>
-                                    <td>I want to create content descriptions</td>
-                                    <td>So I can describe an item's purpose</td>
-                                    <td class='cell--low-priority''>Low</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h3 class='smallest'>User Research</h3>
+                    <p>I created sixty-four <a href="https://docs.google.com/spreadsheets/d/1zO7dsxPrleQyW40Xi6IRJkos4aw5AWHp8IEssycAb5E/edit?usp=sharing" target="_blank" rel="noopener">user stories</a> with acceptance criteria using the personas and competitive analysis from earlier. I
+                    then prioritized each story to limit scope creep, keeping low priority stories for future use. Twenty-four stories were
+                    high priority and included in both the MVP and low-fidelity prototype.</p>
+                    <table>
+                        <thead>
+                            <tr class='overline title'>
+                                <th>Task</th>
+                                <th>User</th>
+                                <th>Goal</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class='high-priority'>
+                                <td>As a new user</td>
+                                <td>I want to create an account via email</td>
+                                <td>So my account is associated with my files</td>
+                                <td class='cell--high-priority'>High</td>
+                            </tr>
+                            <tr class='high-priority'>
+                                <td>As a returning user</td>
+                                <td>I want to rename files and folders</td>
+                                <td>So I can organize and update them</td>
+                                <td class='cell--high-priority'>High</td>
+                            </tr>
+                            <tr class='high-priority'>
+                                <td>As a returning user</td>
+                                <td>I want to use nested folders</td>
+                                <td>So I can understand their hierarchy</td>
+                                <td class='cell--high-priority'>High</td>
+                            </tr>
+                            <tr class='high-priority'>
+                                <td>As a returning user</td>
+                                <td>I want my content to be saved automatically</td>
+                                <td>So I never lose work</td>
+                                <td class='cell--high-priority'>High</td>
+                            </tr>
+                            <tr class='medium-priority'>
+                                <td>As a returning user</td>
+                                <td>I want to pin my files and folders</td>
+                                <td>So I can easily access them</td>
+                                <td class='cell--medium-priority'>Medium</td>
+                            </tr>
+                            <tr class='medium-priority'>
+                                <td>As a returning user</td>
+                                <td>I want to color code my folders</td>
+                                <td>So I can easily find and organize them</td>
+                                <td class='cell--medium-priority'>Medium</td>
+                            </tr>
+                            <tr class='low-priority'>
+                                <td>As a returning user</td>
+                                <td>I want to create content descriptions</td>
+                                <td>So I can describe an item's purpose</td>
+                                <td class='cell--low-priority'>Low</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class ='button' href="https://docs.google.com/spreadsheets/d/1zO7dsxPrleQyW40Xi6IRJkos4aw5AWHp8IEssycAb5E/edit?usp=sharing" target="_blank" rel="noopener">View User Stories</a>
                 </div>
             </div>
         </section>
         <section>
             <div class="container">
                 <div class="sizing">
-                    <h3 class='smallest'>User Flows</h2>
+                    <h3 class='smallest'>User Flows</h3>
                     <p>After sketching out user flows while keeping competitor’s flows in mind, I created  <a href="https://drive.google.com/file/d/1ZWhYokByz13Wv0aihLnPcdmq30XKzmiq/view?usp=sharing" target="_blank" rel="noopener">digital versions</a> using draw.io
                     software. I also created a content strategy and diagrammed a site map at this stage. All three were then used directly
                     in the paper sketches and made quickly generating different ideas for screens a much smoother process.</p>
@@ -497,7 +513,7 @@
                 </div>
             </div>
             <div class="container">
-                <img class= 'margin-extra original-size' class='test' src="images/cira/user-flows_2.svg" alt="Digital user flow of file manipulation">
+                <img class= 'margin-extra original-size' src="images/cira/user-flows_2.svg" alt="Digital user flow of file manipulation">
             </div>
         </section>
         <section>
@@ -510,7 +526,7 @@
                     <p>I conducted three usability tests with twenty-four tasks using the low-fidelity prototype to <strong>pinpoint where experiences
                     could be improved</strong>. Although users breezed through most tasks, there were <strong>a few frustrations</strong> found throughout the prototype,
                     and participants felt that the onboarding messaging could be improved. I then ranked problems and solutions in an
-                    <a href="https://docs.google.com/spreadsheets/d/1yeUr7EszX9yA4BFR8KA9Ow-axjhhuYYE6dTxjfjcONw/edit?usp=sharing" target="_blank" rel="noopener">issue prioritization matrix</a> developed by Carlos Rosemberg. Solutions were implemented and tested in high-fidelty
+                    <a href="https://docs.google.com/spreadsheets/d/1yeUr7EszX9yA4BFR8KA9Ow-axjhhuYYE6dTxjfjcONw/edit?usp=sharing" target="_blank" rel="noopener">issue prioritization matrix</a> developed by Carlos Rosemberg. Solutions were implemented and tested in high fidelity
                     usability tests</p>
                     <p>I found that the most critical problems users had difficulty with were:</p>
                     <ul class='list--bulleted'>
@@ -522,7 +538,7 @@
                     <p class='spacer-top-32px'>Because sharing files was so problematic, I completely reconfigured the share modal at the hi-fidelity prototype.
                     Happily, users quickly returned to the dashboard once Cira's vibrant logo was in place, and no further adjustments were
                     needed.</p>
-                    <p>I also labeled the back-up and sync and setting links to help users find them quickly.</p></p>
+                    <p>I also labeled the back-up and sync and setting links to help users find them quickly.</p>
                 </div>
             </div>
         </section>
@@ -574,30 +590,30 @@
                 </div>
             </div>
             <div class="icons" role='img' aria-label="A grid displaying Cira's custom icons">
-                <img src="images/cira/icons/Backup & Sync.svg" alt="">
-                <img src="images/cira/icons/Branch Large.svg" alt="">
-                <img src="images/cira/icons/Comment.svg" alt="">
-                <img src="images/cira/icons/Commit.svg" alt="">
-                <img src="images/cira/icons/Delete.svg" alt="">
-                <img src="images/cira/icons/Download.svg" alt="">
-                <img src="images/cira/icons/Edit.svg" alt="">
-                <img src="images/cira/icons/Enabled.svg" alt="">
-                <img src="images/cira/icons/File Upload.svg" alt="">
-                <img src="images/cira/icons/Folder Large.svg" alt="">
-                <img src="images/cira/icons/Folder Upload.svg" alt="">
-                <img src="images/cira/icons/Grid.svg" alt="">
-                <img src="images/cira/icons/History.svg" alt="">
-                <img src="images/cira/icons/List.svg" alt="">
-                <img src="images/cira/icons/Merge.svg" alt="">
-                <img src="images/cira/icons/Move.svg" alt="">
-                <img src="images/cira/icons/Pin.svg" alt="">
-                <img src="images/cira/icons/Rename.svg" alt="">
-                <img src="images/cira/icons/Search.svg" alt="">
-                <img src="images/cira/icons/Settings.svg" alt="">
-                <img src="images/cira/icons/Share.svg" alt="">
-                <img src="images/cira/icons/Trash.svg" alt="">
-                <img src="images/cira/icons/Union.svg" alt="">
-                <img src="images/cira/icons/Upload.svg" alt="">
+                <img src="images/cira/icons/backup_sync.svg" alt="">
+                <img src="images/cira/icons/branch_large.svg" alt="">
+                <img src="images/cira/icons/comment.svg" alt="">
+                <img src="images/cira/icons/commit.svg" alt="">
+                <img src="images/cira/icons/delete.svg" alt="">
+                <img src="images/cira/icons/download.svg" alt="">
+                <img src="images/cira/icons/edit.svg" alt="">
+                <img src="images/cira/icons/enabled.svg" alt="">
+                <img src="images/cira/icons/file_upload.svg" alt="">
+                <img src="images/cira/icons/folder_large.svg" alt="">
+                <img src="images/cira/icons/folder_upload.svg" alt="">
+                <img src="images/cira/icons/grid.svg" alt="">
+                <img src="images/cira/icons/history.svg" alt="">
+                <img src="images/cira/icons/list.svg" alt="">
+                <img src="images/cira/icons/merge.svg" alt="">
+                <img src="images/cira/icons/move.svg" alt="">
+                <img src="images/cira/icons/pin.svg" alt="">
+                <img src="images/cira/icons/rename.svg" alt="">
+                <img src="images/cira/icons/search.svg" alt="">
+                <img src="images/cira/icons/settings.svg" alt="">
+                <img src="images/cira/icons/share.svg" alt="">
+                <img src="images/cira/icons/trash.svg" alt="">
+                <img src="images/cira/icons/union.svg" alt="">
+                <img src="images/cira/icons/upload.svg" alt="">
             </div>
         </section>
         <section>
@@ -614,63 +630,63 @@
                 <div class="sizing">
                     <h3 class='smallest'>Color</h3>
                     <p>Cira's colors are vibrant and fun. A range of greys <strong>subdues less distinguishing information</strong> and <strong>reduces clutter</strong>, while
-                    orange and ruby draws attention to both destructive actions and informative tooltips.</p>
+                    orange and ruby draw attention to both destructive actions and informative tooltips.</p>
                     <div class='colors__grid'>
-                        <span data-color='1BBFFC'>
+                        <div class='colors__grid--color' data-color='1BBFFC'>
                             <div>
                                 <p>Brand</p>
                                 <p>Deep Sky Blue</p>
                             </div>
-                        </span>
-                        <span data-color='4353E9'>
+                        </div>
+                        <div class='colors__grid--color' data-color='4353E9'>
                             <div>
                                 <p>Primary</p>
                                 <p>Royal Blue</p>
                             </div>
-                        </span>
-                        <span data-color='3529BF'>
+                        </div>
+                        <div class='colors__grid--color' data-color='3529BF'>
                             <div>
                                 <p>Background</p>
                                 <p>Midnight Blue</p>
                             </div>
-                        </span>
-                        <span data-color='FF4117'>
+                        </div>
+                        <div class='colors__grid--color' data-color='FF4117'>
                             <div>
                                 <p>Alert</p>
                                 <p>Orange Red</p>
                             </div>
-                        </span>
-                        <span data-color='EF005F'> 
+                        </div>
+                        <div class='colors__grid--color' data-color='EF005F'> 
                             <div>
                                 <p>Information</p>
                                 <p>Ruby</p>
                             </div>
-                        </span>
-                        <span data-color='A8AFC8'>
+                        </div>
+                        <div class='colors__grid--color' data-color='A8AFC8'>
                             <div>
                                 <p>Echo Blue</p>
                             </div>
-                        </span>
-                        <span data-color='D6D8E4'>
+                        </div>
+                        <div class='colors__grid--color' data-color='D6D8E4'>
                             <div>
                                 <p>Link Water</p>
                             </div>
-                        </span>
-                        <span data-color='E3E5ED'>
+                        </div>
+                        <div class='colors__grid--color' data-color='E3E5ED'>
                             <div>
                                 <p>Gainsboro</p>
                             </div>
-                        </span>
-                        <span data-color='465470'>
+                        </div>
+                        <div class='colors__grid--color' data-color='465470'>
                             <div>
                                 <p>East Bay<p>
                             </div>
-                        </span>
-                        <span data-color='21262F'>
+                        </div>
+                        <div class='colors__grid--color' data-color='21262F'>
                             <div>
                                 <p>Black Pearl</p>
                             </div>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -755,8 +771,7 @@
             </div>
         </section>
     </main>
-    </div>
-    <footer role="contentinfo">
+    <footer>
         <div class="container">
             <div class="sizing sizing--wide">
                 <ul>

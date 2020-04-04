@@ -22,17 +22,15 @@ function changePersona(persona) {
     })
 }
 
-let colors = document.querySelectorAll('.colors span')
+let colors = document.querySelectorAll('.colors__grid')
 let tooltip = document.createElement('div')
 
-function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
 
-const mobile = isMobile();
+
+const mobile = window.matchMedia('(max-width: 600px)');
 
 function addTooltip() {
-    if (mobile) return
+    if (mobile.matches) return
     let x = event.clientX
     let y = event.clientY
     const colorName = event.target.dataset.color
@@ -45,29 +43,9 @@ function addTooltip() {
 }
 
 function removeTooltip() {
-    document.body.removeChild(tooltip)
+    let visible = document.getElementsByClassName('tooltip').length
+    if (visible ) document.body.removeChild(tooltip)
 }
-
-var container = document.querySelector('#swipe-listener');
-var listener = SwipeListener(container);
-
-
-let i = 0;
-container.addEventListener('swipe', function (e) {
-    var directions = e.detail.directions;
-    var x = e.detail.x;
-    var y = e.detail.y;
-
-    if (directions.left) {
-        if (i > 0) i--
-    }
-
-    if (directions.right) {
-        if (i < personas.length - 1) i++
-    }
-
-    changePersona(personas[i])
-});
 
 colors.forEach(c => c.addEventListener('mousemove', addTooltip))
 colors.forEach(c => c.addEventListener('mouseout', removeTooltip)) 
