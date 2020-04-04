@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-3-inside-1" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 24L24 19L26 19L26 24L24 24Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 24L24 19L26 19L26 24L24 24Z" fill="#5A5A5A"/>
+<path d="M24 19L24 17L22 17L22 19L24 19ZM24 24L22 24L22 26L24 26L24 24ZM26 19L28 19L28 17L26 17L26 19ZM26 24L26 26L28 26L28 24L26 24ZM22 19L22 24L26 24L26 19L22 19ZM26 17L24 17L24 21L26 21L26 17ZM28 24L28 19L24 19L24 24L28 24ZM24 26L26 26L26 22L24 22L24 26Z" fill="#415268" mask="url(#path-3-inside-1)"/>
+<rect x="32" y="33" width="14" height="18" rx="1" transform="rotate(180 32 33)" stroke="#415268" stroke-width="2"/>
+<path d="M27.5981 24.5L25 29L22.4019 24.5L27.5981 24.5Z" fill="#415268" stroke="#415268"/>
+</svg>
