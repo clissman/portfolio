@@ -203,9 +203,6 @@ canvas {
     margin-bottom: 128px;
 }
 
-
-
-
 /* --------------------------------------------- Typography ---------------------------------------------*/
 
 h1,
@@ -253,12 +250,14 @@ li {
 }
 
 .larger {
-    font-size: 63px;
+    font-size: 47px;
     font-weight: 500;
     line-height: 0.9;
     margin: 0 0 32px;
     letter-spacing: -0.1px;
 }
+
+
 
 .smaller {
     font-size: 35px;
@@ -280,7 +279,6 @@ li {
 .body_two {
     font-size: 15px;
 }
-
 
 @media screen and (min-width: 600px) {
 
@@ -599,7 +597,6 @@ tr:last-child {
     }
 }
 
-
 /* --------------------------------------------- Sections: Navigation ---------------------------------------------*/
 
 main {
@@ -614,8 +611,6 @@ header {
     justify-content: center;
     z-index: 1;
 }
-
-
 
 nav {
     align-items: center;
@@ -649,10 +644,6 @@ nav div a {
     }
 }
 
-
-
-
-
 /* --------------------------------------------- Competitive Analysis ---------------------------------------------*/
 
 .competitive_analysis {
@@ -677,7 +668,6 @@ nav div a {
         width: 248px;
     }
 }
-
 
 /* --------------------------------------------- Section Colors ---------------------------------------------*/
 
@@ -936,6 +926,7 @@ nav div a {
 .container-logo img {
     width: 390px;
     margin: 0 24px;
+    padding: 0 24px;
 }
 
 .container-logo:first-child {
@@ -944,7 +935,17 @@ nav div a {
 }
 
 .logo {
-    width: 48px;
+    width: 36px;
+    padding: 4px;
+    margin-left: -2px;
+}
+
+@media screen and (min-width: 600px) {
+    .logo {
+        width: 48px;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .icons {
