@@ -26,7 +26,7 @@ Page Sections
 :root {
     --coral-lightest: #FF5A5A;
     --coral-base: #FF3F3F;
-    --coral-darkest: #E60000; 
+    --coral-darkest: #E60000;
 
     --malibu-darkest: #6DDCFF;
     --malibu-base: #A4E9FF;
@@ -40,9 +40,8 @@ Page Sections
 
     --gradient-1: linear-gradient(156.2deg, #FFFFFF 9.18%, rgba(241, 241, 241, 0.814018) 29.45%, rgba(233, 233, 233, 0.416667) 54.47%, #F7F7F7 74.31%);
     --gradient-2: linear-gradient(156.13deg, #FAFAFA 9.18%, rgba(249, 249, 249, 0.814018) 22.55%, rgba(244, 244, 244, 0.416667) 54.47%, #F7F7F7 91.99%);
-    
-    color: var(--grey-darkest); 
 
+    color: var(--grey-darkest);
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -55,8 +54,8 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-html, body {
-    max-width: 100%;
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -71,35 +70,29 @@ section {
     margin-bottom: 64px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+
+canvas {
+    margin-bottom: 32px;
 }
 
 .sizing {
-    margin: 0 24px;
+    margin: 0 auto;
     max-width: 592px;
     overflow-wrap: break-word;
-    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .sizing--wide {
     max-width: 1200px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
-
-canvas {
-     margin: 0 auto;
-     max-width: 592px;
-}
-
-.container-canvas {
-    margin: 0 24px 32px;
-}
-
 
 .hero {
     position: relative;
     margin-top: -64px;
+    margin-bottom: -32px;
 }
 
 .hero_title {
@@ -120,11 +113,6 @@ canvas {
     }
 }
 
-.full-column {
-    width: 998px;
-    margin: 0 auto;
-}
-
 @media screen and (min-width: 600px) {
     section {
         margin-bottom: 96px;
@@ -139,9 +127,11 @@ canvas {
     font-weight: 500;
     margin-bottom: 16px;
 }
+
 .project_title h2 {
     margin-top: -16px;
-    font-size: 27px; /* Force size during 600px - 900px media query gap */
+    font-size: 27px;
+    /* Force size during 600px - 900px media query gap */
 }
 
 .spacer-top-32px {
@@ -172,11 +162,12 @@ canvas {
     justify-content: center;
     margin: 32px 0;
     padding: 32px 0;
+    width: 100%;
 }
 
 
 .comparison div {
-        margin: 16px 24px;
+    margin: 16px 24px;
 }
 
 @media screen and (min-width: 400px) and (max-width: 1000px) {
@@ -194,8 +185,10 @@ canvas {
     margin: 32px 0;
 }
 
-.margin-extra {
-    margin: 48px 24px 64px;
+.full-column {
+    margin: 48px auto 64px;
+    display: block;
+    max-width: max-content;
 }
 
 
@@ -210,19 +203,23 @@ canvas {
     margin-bottom: 128px;
 }
 
-.original-size {
-    width: initial;
-}
 
 
 
 /* --------------------------------------------- Typography ---------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
-p, address, li {
+p,
+address,
+li {
     font-size: 17px;
     line-height: 1.5;
     letter-spacing: 0.05px;
@@ -248,11 +245,11 @@ li {
 }
 
 .list--bulleted li::before {
-   content: "·";
-   font-weight: 700;
-   margin-right: -3px;
-   position: relative;
-   right: 8px;
+    content: "·";
+    font-weight: 700;
+    margin-right: -3px;
+    position: relative;
+    right: 8px;
 }
 
 .larger {
@@ -286,7 +283,10 @@ li {
 
 
 @media screen and (min-width: 600px) {
-    p, address, li {
+
+    p,
+    address,
+    li {
         font-size: 20px;
     }
 
@@ -326,7 +326,7 @@ li {
     color: var(--grey-base);
     font-size: 16px;
     font-weight: 700;
-    margin-top: 16px;
+    margin-top: 32px;
 }
 
 .align-right {
@@ -358,14 +358,14 @@ a.button {
     letter-spacing: 0.2px;
     margin-top: 16px;
     padding: 12px 16px;
-    transition: background-color 0.4s ease;
+    transition: background-color 0.1s ease;
 }
 
 a.button:hover {
     background: var(--coral-darkest);
 }
 
-a.button:first-of-type{
+a.button:first-of-type {
     margin-right: 32px;
 }
 
@@ -379,7 +379,7 @@ a.button--secondary:hover {
     background: var(--grey-lightest);
 }
 
-.personas__buttons button{
+.personas__buttons button {
     background-color: var(--coral-base);
     border: 0;
     color: white;
@@ -402,12 +402,12 @@ a.button--secondary:hover {
 /* --------------------------------------------- Tables ---------------------------------------------*/
 
 table {
-  border-collapse: collapse;
-  font-size: 15px;
-  letter-spacing: 0.2px;
-  margin-top: 32px;
-  max-width: 100%;
-  table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    margin-top: 32px;
+    max-width: 100%;
+    table-layout: fixed;
 }
 
 table caption {
@@ -443,17 +443,17 @@ thead th:first-child {
     width: 100px;
 }
 
-tr { 
-  border: solid var(--grey-lighter);
-  border-width: 1px 0;
+tr {
+    border: solid var(--grey-lighter);
+    border-width: 1px 0;
 }
 
 tr:first-child {
-  border-top: none;
+    border-top: none;
 }
 
 tr:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .cell--medium-priority {
@@ -565,13 +565,20 @@ tr:last-child {
 
 /* --------------------------------------------- Sections: Skills ---------------------------------------------*/
 
+
+
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: -32px;
-    margin-top: 32px;
+    margin: 32px 0 -32px;
+    flex-basis: fill;
 }
+
+.skills h2 {
+    flex-basis: 100%;
+}
+
 
 .skills div {
     flex-basis: 50%;
@@ -584,7 +591,7 @@ tr:last-child {
 
 @media screen and (min-width: 780px) {
     .skills div {
-        flex-basis: content;
+        flex-basis: auto;
     }
 
     .skills h3 {
@@ -630,8 +637,8 @@ nav a {
 }
 
 nav div a {
-     margin-left: 8px;
-     padding: 12px 2px;
+    margin-left: 8px;
+    padding: 12px 2px;
 }
 
 @media screen and (min-width: 600px) {
@@ -661,7 +668,7 @@ nav div a {
     margin-bottom: 0;
 }
 
-.competitive_analysis > ul {
+.competitive_analysis>ul {
     margin: 32px 0;
 }
 
@@ -675,14 +682,14 @@ nav div a {
 /* --------------------------------------------- Section Colors ---------------------------------------------*/
 
 .colors__grid {
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(4, 1fr);
-  width: 100%;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
 }
 
 .colors__grid--color {
-    align-items:flex-end;
+    align-items: flex-end;
     display: flex;
     height: 100px;
 }
@@ -749,7 +756,7 @@ nav div a {
 }
 
 @media screen and (min-width: 600px) {
-    .colors__grid  {
+    .colors__grid {
         grid-template-columns: repeat(6, 1fr);
     }
 }
@@ -760,26 +767,26 @@ nav div a {
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto min-content ;
+    grid-template-rows: auto min-content;
     width: 100%;
     grid-template-areas: "name   name    photo  photo"
-                         "quote  quote   photo  photo"
-                         "info   info    photo  photo"
-                         "bio    bio     bio    bio"
-                         "moti   moti    moti   moti"
-                         "goals  goals   frust  frust ";
+        "quote  quote   photo  photo"
+        "info   info    photo  photo"
+        "bio    bio     bio    bio"
+        "moti   moti    moti   moti"
+        "goals  goals   frust  frust ";
 }
 
 @media screen and (min-width: 600px) {
     .persona {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-areas:  "name   name    photo  photo  photo   photo"
-                              "quote  quote   photo  photo  photo   photo"
-                              "info   info    photo  photo  photo   photo"
-                              "bio    bio     bio    bio    goals   goals"
-                              "moti   moti    moti   moti   frust   frust";
+        grid-template-areas: "name   name    photo  photo  photo   photo"
+            "quote  quote   photo  photo  photo   photo"
+            "info   info    photo  photo  photo   photo"
+            "bio    bio     bio    bio    goals   goals"
+            "moti   moti    moti   moti   frust   frust";
     }
-    
+
 }
 
 @media screen and (max-width: 400px) {
@@ -829,7 +836,8 @@ nav div a {
     font-size: 15px;
 }
 
-.persona p, .persona h5 {
+.persona p,
+.persona h5 {
     margin: 0;
 }
 
@@ -890,7 +898,7 @@ nav div a {
     justify-content: space-between;
 }
 
-.details--quarter {  
+.details--quarter {
     flex-basis: 50%;
 }
 
@@ -919,6 +927,10 @@ nav div a {
     padding: 32px 0;
     display: flex;
     justify-content: center;
+}
+
+.container-logo--white {
+    background: white;
 }
 
 .container-logo img {
@@ -954,7 +966,7 @@ address {
     margin-top: -8px;
 }
 
-address a{
+address a {
     color: var(--coral-darkest);
     font-style: normal;
     white-space: nowrap;
@@ -964,7 +976,7 @@ address a{
     max-width: 217px;
 }
 
-.contact h2 {
+h2.contact {
     margin-bottom: 20px;
 }
 
@@ -973,15 +985,15 @@ address a{
         max-width: 328px;
     }
 
-    .contact a {
+    address.contact {
         font-size: 27px;
     }
 
-    .contact h2 {
-    font-weight: 500;
-    font-size: 63px;
-    line-height: 0.9;
-    margin: 64px 0 32px;
+    h2.contact {
+        font-weight: 500;
+        font-size: 63px;
+        line-height: 0.9;
+        margin: 64px 0 32px;
     }
 }
 
@@ -995,7 +1007,11 @@ footer {
     height: 192px;
 }
 
-footer a  {
+footer div {
+    margin: 0;
+}
+
+footer a {
     color: white;
 }
 
@@ -1017,13 +1033,14 @@ footer ul {
 @media screen and (min-width: 600px) {
     footer {
         height: 92px;
+        justify-content: center;
     }
 
     footer ul {
         flex-flow: row;
         order: 2;
     }
-    
+
     footer li {
         margin: 0 0 0 64px;
     }
