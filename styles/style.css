@@ -924,9 +924,8 @@ nav div a {
 }
 
 .container-logo img {
-    width: 390px;
+    max-width: 390px;
     margin: 0 24px;
-    padding: 0 24px;
 }
 
 .container-logo:first-child {
