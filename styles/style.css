@@ -762,6 +762,9 @@ nav div a {
     opacity: 0;
 }
 
+.initial {
+    visibility: hidden;
+}
 
 .active-1 {
     visibility: visible;
@@ -773,10 +776,6 @@ nav div a {
     visibility: visible;
     opacity: 100;
     transition: opacity 0.25s 0.40s ease-out;
-}
-
-.instant-hide {
-    visibility: hidden;
 }
 
 .inactive-1 {

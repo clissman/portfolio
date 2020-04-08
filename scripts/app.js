@@ -70,6 +70,3 @@ function openMenu() {
     menuOpen = !menuOpen
 }
 
-function instantHide() {
-    mobileMenu.classList.add('instant-hide')
-}
