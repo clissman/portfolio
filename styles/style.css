@@ -775,6 +775,9 @@ nav div a {
     transition: opacity 0.25s 0.40s ease-out;
 }
 
+.instant-hide {
+    visibility: hidden;
+}
 
 .inactive-1 {
     visibility: hidden;
