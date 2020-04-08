@@ -49,3 +49,24 @@ function removeTooltip() {
 
 colors.forEach(c => c.addEventListener('mousemove', addTooltip))
 colors.forEach(c => c.addEventListener('mouseout', removeTooltip)) 
+
+
+let mobileMenu = document.querySelector('.mobile-menu')
+let mobileMenuLinks = document.querySelector('.mobile-menu__links')
+
+
+let menuOpen = false;
+
+function openMenu() {
+    if (!menuOpen) {
+        event.target.classList.add('hamburger--active')
+        mobileMenu.classList.add('active-1')
+        mobileMenuLinks.classList.add('active-2')
+    } else {
+        event.target.classList.remove('hamburger--active')
+        mobileMenu.classList.remove('active-1')
+        mobileMenuLinks.classList.remove('active-2')
+    }
+    menuOpen = !menuOpen
+}
+

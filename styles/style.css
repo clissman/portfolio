@@ -722,6 +722,102 @@ nav div a {
     }
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+
+@media screen and (max-width:600px) {
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+.mobile-menu {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 128px;
+    transition: 0.25s 0.4s ease-in;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mobile-menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30vh;
+    margin-top: 64px;
+    transition: 0.25s ease-in;
+    opacity: 0;
+}
+
+
+.active-1 {
+    visibility: visible;
+    opacity: 100;
+    transition: 0.25s ease-out;
+}
+
+.active-2 {
+    visibility: visible;
+    opacity: 100;
+    transition: opacity 0.25s 0.40s ease-out;
+}
+
+
+.inactive-1 {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .4s, opacity 0.3s ease-out;
+}
+
+.inactive-2 {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .4s, opacity 0.3s ease-out;
+}
+
+
+.hamburger {
+    margin: 1em;
+    width: 24px;
+}
+
+.hamburger:after,
+.hamburger:before,
+.hamburger div {
+    background-color: var(--grey-darkest);
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 4px 0;
+    transition: all 0.2s 0.1s ease-in-out;
+}
+
+.hamburger.hamburger--active:before {
+    transform: translateY(6px) rotate(135deg);
+}
+
+.hamburger.hamburger--active:after {
+    transform: translateY(-6px) rotate(-135deg);
+}
+
+.hamburger.hamburger--active div {
+    transform: scale(0);
+}
+
+
 
 /* --------------------------------------------- Competitive Analysis ---------------------------------------------*/
 
@@ -1009,6 +1105,7 @@ nav div a {
 .container-logo img {
     max-width: 390px;
     margin: 0 24px;
+    padding: 0 24px;
 }
 
 .container-logo:first-child {
@@ -1018,7 +1115,7 @@ nav div a {
 
 .logo {
     width: 36px;
-    padding: 4px;
+    padding: 12px;
     margin-left: -2px;
 }
 
