@@ -3,6 +3,7 @@
 var ctx_1 = document.getElementById('chart-1')
 var ctx_2 = document.getElementById('chart-2')
 var ctx_3 = document.getElementById('chart-3')
+var ctx_4 = document.getElementById('chart-4')
 
 Chart.defaults.global.defaultFontFamily = "DM Sans";
 Chart.defaults.global.defaultFontSize = 12;
@@ -101,3 +102,31 @@ var chart3 = new Chart(ctx_3, {
     }
 });
 
+var chart4 = new Chart(ctx_4, {
+    type: 'doughnut',
+    data: {
+        labels: ["Dark Bottom Bar", "Light Bottom Bar"],
+        datasets: [{
+            data: [12, 3],
+            backgroundColor: [
+                '#0FACDE',
+                '#6DDCFF',
+            ],
+            borderWidth: 0,
+            hoverBorderWidth: 0,
+        }]
+    },
+    options: {
+        rotation: 0.2 * Math.PI,
+        legend: {
+            display: true,
+            onClick: null,
+            position: 'top',
+            labels: {
+                boxWidth: 10,
+                fontColor: '#505050',
+                fontSize: 15,
+            }
+        }
+    }
+});

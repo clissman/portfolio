@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='description' content="Chris Lissman's Portfolio with UX Design Case Studies">
-    <meta name="keywords" content="Chris Lissman, UX Designer, UX Engineer, Cira, User Research, User Flows, User Stories, Brand Guidelines, Logo, Branding, Personas, Prototyping, G Suite, Ethnography, Design Systems, User Surveys, User Interviews, Competitive Analysis, SWOT Analysis, Wireframes, Figma, Adobe CC, Photoshop, Illustrator, XD, HTML, CSS, React, JavaScript, Git, jQuery">
+    <meta name="keywords" content="Chris Lissman, Lissman UX, UX Designer, UX Engineer, Cira, User Research, User Flows, User Stories, Brand Guidelines, Logo, Branding, Personas, Prototyping, G Suite, Ethnography, Design Systems, User Surveys, User Interviews, Competitive Analysis, SWOT Analysis, Wireframes, Figma, Adobe CC, Photoshop, Illustrator, XD, HTML, CSS, React, JavaScript, Git, jQuery">
     <title>Chris Lissman | Cira Case Study</title>
     <link rel="shortcut icon" href="images/logo_favicon.png?v=2" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -28,7 +28,7 @@
                 <a href="index.html">Work</a>
                 <a href="about.html">About</a>
                 <a href="chris_lissman_resume.pdf" target="_blank" rel="noopener">Resume</a>
-                <a href="mailto:clissmanux@gmail.com" target="_blank" rel="noopener">Contact</a>
+                <a href="mailto:clissmanux@gmail.com" target="_blank" rel="noopener">Email me</a>
             </div>
         </nav>
     </header>
@@ -132,7 +132,7 @@
                 many and platforms like GitHub can be intimidating, I made the process as simple as possible while maintaining its collaborative strength.</p>
                 <p>Survey analysis also revealed that:</p>
                 <ul class='list--bulleted'>
-                    <li>Less than half of people organized files</li>
+                    <li>Less than half of people organized their files</li>
                     <li>Expense, privacy, and security are major concerns for many</li>
                     <li>YouTube is the most popular external learning resource, followed by documentation</li>
                 </ul>
@@ -145,15 +145,28 @@
                 popular services found in the user survey with a <a href='https://docs.google.com/document/d/1F159_5qDThcHDVQX1hqBsS9YDDE2Yq5O6mTpV8WCER4/edit?usp=sharing' target="_blank" rel="noopener">competitive analysis</a>. I also mapped out user flows for these products to see how they worked and
                 the logic behind their differences.</p>
                 <article class='competitive_analysis'>
-                    <img src="images/cira/logo_google.svg" alt="Google Drive logo">
-                    <p>Google Drive was overwhelmingly the most popular service. It also was mentioned most when people discussed their
-                    frustrations.</p>
+                    <h4 class='mini'>Google Drive</h4>
+                    <p>Google Drive was overwhelmingly the most popular service. It also was mentioned most when people discussed their frustrations. Its interface is clear and mostly intuitive.</p>
+                    <h5 class="overline title">Interface</h5>
+                    <img src="images/cira/google_drive_capture.jpg" alt="Google Drive's Interface">
+                    <p class='margin--32-top'>Drive's interface has <strong>contextual menus</strong> accessed by
+                        right-clicking and a <strong>persistent file tree</strong> that displays nested, customizable folders.</p>
+                    <div class='container__flexbox--6'>
+                        <div>
+                            <h5 class="overline title">Contextual Menu</h5>
+                            <img src="/images/cira/google_drive_contextual_menu.jpg" alt="Google Drive's contextual menu">
+                        </div>
+                        <div>
+                            <h5 class="overline title">File Tree</h5>
+                            <img src="/images/cira/google_drive_file_tree.jpg" alt="Google Drive's file tree showing deep nesting">
+                        </div>
+                    </div>
                     <ul>
                         <li><span class='overline title'>Strengths</span>
                             <ul class='list--bulleted'>
-                                <li>Offered the most storage</li>
-                                <li>Is integrated with a full productivity suite</li>
-                                <li>Is less cluttered than Dropbox</li>
+                                <li>Handy sidebar with  persistent file tree and access to recent, shared and starred files</li>
+                                <li>Contextual menus and drag & drop interface</li>
+                                <li>Easy to locate files and folders with with colored folders, stars, and search</li>
                             </ul>
                         </li>
                     </ul>
@@ -162,14 +175,30 @@
                             <ul class='list--bulleted'>
                                 <li>Basic version control</li>
                                 <li>Lacks file tagging</li>
-                                <li>May raise privacy concerns for users</li>
+                                <li>File tree expands indefinitely</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><span class='overline title'>Opportunities</span>
+                            <ul class='list--bulleted'>
+                                <li>Advanced version control</li>
+                                <li>Automatic file tagging for photographs</li>
+                                <li>More intuitive file tree</li>
                             </ul>
                         </li>
                     </ul>
                 </article>
                 <article class='competitive_analysis'>
-                    <img src="images/cira/logo_dropbox.svg" alt="Dropbox logo">
-                    <p>Dropbox was also very popular. It was the only service that has both Slack and Zoom integration.</p>
+                    <h4 class='mini'>Dropbox</h4>
+                    <p>Dropbox was also very popular. It was the only service that has both Slack and Zoom
+                        integration. Its UI was disorganized, however. </p>
+                    <h5 class="overline title">Dropbox's Interface is confusing</h5>
+                    <img src="/images/cira/dropbox_capture_1.jpg" alt="Dropbox's Interface">
+                    <p class='margin--32-top'>During a heuristic analysis of Dropbox, I found areas where up to four menus were found
+                        side-by-side and overlapping. Many options found under a single button in other apps were instead placed in these menus.</p>
+                    <h5 class="overline title">Numerous lists and contextual menus appear close by</h5>
+                    <img src="/images/cira/dropbox_capture_2.jpg" alt="Dropbox's Interface Close Up">
                     <ul>
                         <li><span class='overline title'>Strengths</span>
                             <ul class='list--bulleted'>
@@ -182,22 +211,38 @@
                     <ul>
                         <li><span class='overline title'>Weaknesses</span>
                             <ul class="list--bulleted">
-                                <li>Comparatively small amount of storage</li>
-                                <li>Only 2GB storage for basic plan</li>
-                                <li>No proprietary apps</li>
+                                <li>Confusing interface</li>
+                                <li>No right-click interactions</li>
+                                <li>No sidebar with file tree</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><span class='overline title'>Opportunities</span>
+                            <ul class="list--bulleted">
+                                <li>Consolidating interface</li>
+                                <li>Improving mouse interactions</li>
+                                <li>Implementing sidebar with file tree</li>
                             </ul>
                         </li>
                     </ul>
                 </article>
                 <article class='competitive_analysis'>
-                    <img src="images/cira/logo_onedrive.svg" alt="Microsoft OneDrive logo">
-                    <p>Microsoft was the only service with a set of APIs that enabled developers to work on web services and client apps
+                    <h4 class='mini'>Microsoft OneDrive</h4>
+                    <p>OneDrive is a pleasant but underwhelming service that sacrifices power for simplicity. It was also the only service with a set of APIs that enabled developers to work on web services and client apps
                     together.</p>
+                    <h5 class="overline title">OneDrive's interface is simple and dated</h5>
+                    <img src="/images/cira/onedrive_comparison_1.jpg" alt="OneDrive's dashboard">
+                    <p class="margin--32-top">Although OneDrive lacks visual finesse, it is well organized and has
+                        powerful automatic image tagging. The tags in the following image were all generated
+                        automatically.</p>
+                    <h5 class="overline title">OneDrive's photo tagging</h5>
+                    <img src="/images/cira/onedrive_comparison_2.jpg" alt="Photo of a dog in a park stored in OneDrive, with descriptive tags alongside">
                     <ul>
                         <li><span class='overline title'>Strengths</span>
                             <ul class="list--bulleted">
                                 <li>Automatic photo tagging and organization</li>
-                                <li>Referral bonus for additional storage</li>
+                                <li>Straightforward user interface</li>
                                 <li>Integration with Office 365</li>
                             </ul>
                         </li>
@@ -206,12 +251,23 @@
                         <li><span class='overline title'>Weaknesses</span>
                             <ul class="list--bulleted">
                                 <li>Somewhat confusing onboarding with obscure links</li>
-                                <li>Only 5GB storage initially</li>
+                                <li>No sidebar with file tree</li>
                                 <li>No organizational tools other than tagging</li>
                             </ul>
                         </li>
                     </ul>
+                    <ul>
+                        <li><span class='overline title'>Opportunities</span>
+                            <ul class="list--bulleted">
+                                <li>Improve onboarding and account management</li>
+                                <li>Expand organizational tools</li>
+                                <li>Update appearance</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
                 </article>
+                <a href="https://docs.google.com/document/d/1F159_5qDThcHDVQX1hqBsS9YDDE2Yq5O6mTpV8WCER4/edit?usp=sharing" target="_blank" rel="noopener" class="button">View Competitive Analysis</a>
             </div>
         </section>
         <section class='personas'>
@@ -227,7 +283,7 @@
                 </div>
                 <article class='persona' id='wendy'>
                     <div class="name">
-                        <p class='smaller'>Wendy D.</p>
+                        <h4 class='smaller'>Wendy D.</h4>
                         <p class='overline title'>Organize & Edit</p>
                     </div>
                     <img src="images/cira/wendy.webp" alt="Wendy, a young woman smiling outdoors">
@@ -279,7 +335,7 @@
                 </article>
                 <article class='persona' id='vince' style='display: none'>
                     <div class="name">
-                        <p class='smaller'>Vince E.</p>
+                        <h4 class='smaller'>Vince E.</h4>
                         <p class='overline title'>Organize & Permit</p>
                     </div>
                     <img src="images/cira/vince.webp" alt="Vince, a younger man standing outdoors">
@@ -333,7 +389,7 @@
                 </article>
                 <article class='persona' id='luca' style='display: none'>
                     <div class="name">
-                        <p class='smaller'>Luca B.</p>
+                        <h4 class='smaller'>Luca B.</h4>
                         <p class='overline title'>Collect & Secure</p>
                     </div>
                     <img src="images/cira/luca.webp" alt="Luca, a young man standing outdoors">
@@ -356,7 +412,7 @@
                     </div>
                     <div class='bio'>
                         <p class='overline title'>Bio</p>
-                        <p class='body_two'>Luca is married and has two young children. He is a heart surgeon and constantly busy between family and professional
+                        <p class='body_two'>Luca is married and has two young children. He is a surgeon and constantly busy between family and professional
                         life. He cherishes vacations and prides himself on taking professional quality photographs, and has recently begun to
                         learn to edit them digitally. He doesn’t frequently use a computer for any purpose outside of work communication.</p>
                     </div>
@@ -457,21 +513,25 @@
                 <p>After sketching out user flows while keeping competitor’s flows in mind, I created  <a href="https://drive.google.com/file/d/1ZWhYokByz13Wv0aihLnPcdmq30XKzmiq/view?usp=sharing" target="_blank" rel="noopener">digital versions</a> using draw.io
                 software. I also created a content strategy and diagrammed a site map at this stage. All three were then used directly
                 in the paper sketches and made quickly generating different ideas for screens a much smoother process.</p>
-                <img class ='partial' src="images/cira/user_flows.jpg" alt="Paper sketches of user flows">
             </div>
+            <img class ='full-column' src="images/cira/user_flows.jpg" alt="Paper sketches of user flows">
             <img class= 'full-column' src="images/cira/user-flows_2.svg" alt="Digital user flow of file manipulation">
+            <div class="sizing">
+                <a class='button' href="https://drive.google.com/file/d/1ZWhYokByz13Wv0aihLnPcdmq30XKzmiq/view?usp=sharing" target="_blank" rel="noopener">View User Flows</a>
+            </div>
         </section>
         <section>
             <div class="sizing">
                 <h3 class='smallest'>Wireframes & Usability Tests</h3>
                 <p>I created a series of hand-drawn wireframes for screens, modals, and components based on both user flows and content
                 strategy. These were then recreated in Figma and made into a <a href="https://www.figma.com/proto/CbiSWZB2gppot0N61sNSTU/10.9-Prototype?node-id=2%3A51&viewport=613%2C517%2C0.0388791449368&scaling=min-zoom" target="_blank" rel="noopener">low-fidelity prototype</a>.</p>
-                <img class='partial' src="images/cira/wireframe_sketch.jpg" alt="Wireframe sketches">
+            </div>
+            <img class="full img--nudge-top" src="images/cira/wireframe_comparison.webp" alt="Pen and paper sketches of Cira wireframes next to digital versions">
+            <div class="sizing">
                 <p>I conducted three usability tests with twenty-four tasks using the low-fidelity prototype to <strong>pinpoint where experiences
                 could be improved</strong>. Although users breezed through most tasks, there were <strong>a few frustrations</strong> found throughout the prototype,
-                and participants felt that the onboarding messaging could be improved. I then ranked problems and solutions in an
-                <a href="https://docs.google.com/spreadsheets/d/1yeUr7EszX9yA4BFR8KA9Ow-axjhhuYYE6dTxjfjcONw/edit?usp=sharing" target="_blank" rel="noopener">issue prioritization matrix</a> developed by Carlos Rosemberg. Solutions were implemented and tested in high fidelity
-                usability tests</p>
+                and participants felt that the onboarding messaging could be improved. I then ranked problems in an
+                <a href="https://docs.google.com/spreadsheets/d/1yeUr7EszX9yA4BFR8KA9Ow-axjhhuYYE6dTxjfjcONw/edit?usp=sharing" target="_blank" rel="noopener">issue prioritization matrix</a> developed by Carlos Rosemberg.</p>
                 <p>I found that the most critical problems users had difficulty with were:</p>
                 <ul class='list--bulleted'>
                     <li>Sharing files</li>
@@ -479,33 +539,41 @@
                     <li>Moving files</li>
                     <li>Finding the back-up and sync link</li>
                 </ul>
-                <p class='spacer-top-32px'>Because sharing files was so problematic, I completely reconfigured the share modal at the hi-fidelity prototype.
-                Happily, users quickly returned to the dashboard once Cira's vibrant logo was in place, and no further adjustments were
-                needed.</p>
-                <p>I also labeled the back-up and sync and setting links to help users find them quickly.</p>
+                <p class='margin--16-top'>Solutions to the most pressing problems were implemented and tested in high fidelity usability tests
+                    with excellent results.</p>
+                <a class='button' href="https://docs.google.com/spreadsheets/d/1yeUr7EszX9yA4BFR8KA9Ow-axjhhuYYE6dTxjfjcONw/edit?usp=sharing" target="_blank" rel="noopener">View Test Results</a>
+                <h4 class="overline title margin--64-top">Solutions to Problems Found During Lo-Fi Usability Testing</h4>
             </div>
-        </section>
-        <section>
-            <img class='full' src="images/cira/brand_guidelines.webp" alt="Multiple pages from Cira's brand guidelines">
+            <img src="images/cira/lo_hi_comparison.webp" alt="Diagram showing changes from low fidelity to high fidelity prototype's dashboard">
             <div class="sizing">
-                <h2 class='larger title'>Visual Design</h2>
-                <p>Because Cira is cloud storage for designers, I wanted it to have a look and feel more like graphic
-                design software and less like cloud storage.</p>
-                <p>I kept the interface minimal while using energetic colors and sleek shapes. Travel and adventure are used for inspiration
-                throughout the design.</p>
-                <a class ='button' href="https://drive.google.com/file/d/18KgdcYwLyw5Lr5AlQwiim1jcfUP04tQT/view?usp=sharing" target="_blank" rel="noopener">View Brand Guidelines</a>
-            </div>
-        </section>
-        <section>
-            <article class="sizing">
-                <h3 class='smallest'>Logo</h3>
-                <p>To develop the Cira brand, I started with a mind-map to discover associations between the user personas and cloud
-                storage. This led me to the name Cira, which is derived from the Latin word <i>cirrus</i> and alludes to both clouds and branching. Using the map's links and the attributes <strong>fun, adventurous, and playful</strong>, I quickly sketched out several ideas
-                for the Cira logo.</p>
-            </article>
-            <img class='full-column' src="images/cira/logo_sketch.webp" alt="Paper sketches of mindmap and logo exploration">
-            <article class="sizing">
-                <p>The final Cira logomark is geometric and semi-abstract, but still clearly communicates cloud storage. Its circles
+                <p class='spacer-top-32px'>Because sharing files was so problematic, I completely reconfigured the share modal in the hi-fidelity prototype.
+                    Happily, users quickly returned to the dashboard once Cira's vibrant logo was in place, and no further adjustments were
+                    needed.</p>
+                    <p>I also labeled the back-up and sync and setting links to help users find them quickly.</p>
+                    <a href="https://www.figma.com/proto/CbiSWZB2gppot0N61sNSTU/10.9-Prototype?node-id=2%3A51&viewport=613%2C517%2C0.0388791449368&scaling=min-zoom" class="button">View Low-Fi Prototype</a>
+                </div>
+            </section>
+            <section>
+                <img class='full' src="images/cira/brand_guidelines.webp" alt="Multiple pages from Cira's brand guidelines">
+                <div class="sizing">
+                    <h2 class='larger title'>Visual Design</h2>
+                    <p>Because Cira is cloud storage for designers, I wanted it to have a look and feel more like graphic
+                        design software and less like cloud storage.</p>
+                        <p>I kept the interface minimal while using energetic colors and sleek shapes. Travel and adventure are used for inspiration
+                            throughout the design.</p>
+                            <a class ='button' href="https://drive.google.com/file/d/18KgdcYwLyw5Lr5AlQwiim1jcfUP04tQT/view?usp=sharing" target="_blank" rel="noopener">View Brand Guidelines</a>
+                        </div>
+                    </section>
+                    <section>
+                        <article class="sizing">
+                            <h3 class='smallest'>Logo</h3>
+                            <p>To develop the Cira brand, I started with a mind-map to discover associations between the user personas and cloud
+                                storage. This led me to the name Cira, which is derived from the Latin word <i>cirrus</i> and alludes to both clouds and branching. Using the map's links and the attributes <strong>fun, adventurous, and playful</strong>, I quickly sketched out several ideas
+                                for the Cira logo.</p>
+                            </article>
+                            <img class='full-column' src="images/cira/logo_sketch.webp" alt="Paper sketches of mindmap and logo exploration">
+                            <article class="sizing">
+                                <p>The final Cira logomark is geometric and semi-abstract, but still clearly communicates cloud storage. Its circles
                 radiate smoothly from a central point, conveying Cira's <strong>collaborative possibilities</strong>.</p>
             </article>
             <div class="container-logo container-logo--white">
@@ -555,7 +623,7 @@
             </div>
         </section>
         <section class='colors body_two'>
-            <article class="sizing">
+            <div class="sizing">
                 <h3 class='smallest'>Color</h3>
                 <p>Cira's colors are vibrant and fun. A range of greys <strong>subdues less distinguishing information</strong> and <strong>reduces clutter</strong>, while
                 orange and ruby draw attention to both destructive actions and informative tooltips.</p>
@@ -616,7 +684,7 @@
                         </div>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
         <section>
             <img class ='full' src="images/cira/design_system.webp" alt="Cira's design system">
@@ -637,7 +705,7 @@
                 <p>To solve these problems I placed the permissions option directly next to its corresponding field with dynamic permission
                 labels above, increased the contrast of placeholder text, and changed the wording throughout.</p>
                 <p>I also included subtle variations in cloud motifs in this and other modals to guide users. Because this addition would
-                appear on numerous screens, I preference tested it and found that it was well-received</p>
+                appear on numerous screens, I preference tested it and found that it was preferred by 56% of participants. Because of its potential to direct user's attention</p>
             </div>
             <div class="comparison">
                 <div>
@@ -651,17 +719,35 @@
             </div>
             <div class="sizing">
                 <p>Users found this modal much <strong>more clear and intuitive</strong> during testing and were able to share files with permissions easily.</p>
-                <h4 class="paragraph_description">Dashboard refinement</h4>
-                <p>Users found the dashboard easy to use and navigate through, and especially liked that folders displayed the number of
-                items they contained. There was still some difficulty finding the backup and sync option, so it and settings were
-                labeled. I also preference tested different arrangements of images and icons and found a preferred balance between the
-                number and size of items and their spacing.</p>
-            </div>
-            <div class="background--grey">
-                <div>
-                    <p class="overline title">Dashboard Grid View</p>
-                    <img src="images/cira/desktop_dashboard.webp" alt="Desktop dashboard">
+                <h4 class="paragraph_description">Mobile preferences</h4>
+                <p>I also used UsabilityHub to find people's preference for mobile layouts, including the color of the
+                    bottom icon bar. Participants preferred the darker bar by a <strong>ratio of 5:1</strong> because it:</p>
+                <ul class='list--bulleted'>
+                    <li>Was more balanced</li>
+                    <li>Showed where the images stopped</li>
+                    <li>Emphasized icons and was clearer</li>
+                </ul>
                 </div>
+                <div class='preference_comparison img--nudge-top'>
+                    <div>
+                        <p class="graph__title flex--full">Which screen do you prefer?</p>
+                        <img src="/images/cira/mobile_bar_comparison.png" alt="Two mobile screens with dark and light bottom icon bars">
+                    </div>
+                    <canvas role='img' aria-label="Chart showing mobile icon bar preference" id="chart-4"></canvas>
+                </div>
+                <div class="background--grey">
+                    <div>
+                        <p class="overline title">Dashboard Grid View</p>
+                        <img src="images/cira/desktop_dashboard.webp" alt="Desktop dashboard">
+                    </div>
+                                <div class="sizing">
+                                    <h4 class="paragraph_description">Dashboard refinement</h4>
+                                    <p>Users found the dashboard easy to use and navigate through, and especially liked that folders displayed the number of
+                                    items they contained. There was still some difficulty finding the backup and sync option, so it and settings were
+                                    labeled. I also preference tested different arrangements of images and icons and
+                                    found a <strong>preferred balance</strong> between the
+                                    number and size of items and their spacing.</p>
+                                </div>
             </div>
         </section>
         <section>
