@@ -40,6 +40,7 @@ Page Sections
 
     --gradient-1: linear-gradient(156.2deg, #FFFFFF 9.18%, rgba(241, 241, 241, 0.814018) 29.45%, rgba(233, 233, 233, 0.416667) 54.47%, #F7F7F7 74.31%);
     --gradient-2: linear-gradient(156.13deg, #FAFAFA 9.18%, rgba(249, 249, 249, 0.814018) 22.55%, rgba(244, 244, 244, 0.416667) 54.47%, #F7F7F7 91.99%);
+    --gradient-3: linear-gradient(160.4deg, #F2F3F4 9.18%, rgba(229, 231, 236, 0.416667) 34.49%, rgba(234, 235, 239, 0.91998) 69.99%, #EEF0F5 91.99%);
 
     color: var(--grey-darkest);
     font-family: 'DM Sans', sans-serif;
@@ -128,12 +129,12 @@ canvas {
 .container__flexbox--6 {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .container__flexbox--6 img {
-      /* height: 521px; */
-      max-width: inherit;
+    /* height: 521px; */
+    max-width: inherit;
 }
 
 .img--nudge-top {
@@ -173,6 +174,10 @@ canvas {
     padding: 32px 0;
     width: 100%;
     flex-wrap: wrap;
+}
+
+.background--grey .sizing {
+    order: -1;
 }
 
 .background--grey img {
@@ -436,26 +441,6 @@ a.button--secondary:hover {
     background: var(--grey-lightest);
 }
 
-.personas__buttons button {
-    background-color: var(--coral-base);
-    border: 0;
-    color: white;
-    cursor: pointer;
-    padding: 8px 0;
-    transition: 0.2s ease;
-    width: 100%;
-}
-
-.personas__buttons button.inactive {
-    background-color: var(--grey-lightest);
-    color: var(--grey-darkest);
-}
-
-.personas__buttons button.inactive:hover {
-    background: var(--coral-base);
-    color: white;
-}
-
 /* --------------------------------------------- Tables ---------------------------------------------*/
 
 table {
@@ -704,6 +689,7 @@ nav a {
     .two-columns {
         display: flex;
     }
+
     .photo {
         margin-left: 117px;
         min-width: 392px;
@@ -733,6 +719,7 @@ nav div a {
     .menu {
         display: none;
     }
+
     .hamburger {
         display: block;
     }
@@ -764,6 +751,7 @@ nav div a {
 
 .initial {
     visibility: hidden;
+    transition: none;
 }
 
 .active-1 {
@@ -931,25 +919,47 @@ nav div a {
     grid-gap: 16px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto min-content;
-    width: 100%;
-    grid-template-areas: "name   name    photo  photo"
-        "quote  quote   photo  photo"
-        "info   info    photo  photo"
-        "bio    bio     bio    bio"
-        "moti   moti    moti   moti"
-        "goals  goals   frust  frust ";
+    /* width: 100%; */
+    grid-template-areas: "photo photo name name"
+        "photo photo quote quote"
+        "photo photo info info"
+        "moti   moti     bio    bio"
+        "goals  goals   frust  frust";
+    background: white;
+    padding: 24px;
+    max-width: 502px;
+    margin-top: 32px;
 }
 
+/* 
 @media screen and (min-width: 600px) {
     .persona {
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas: "name   name    photo  photo  photo   photo"
-            "quote  quote   photo  photo  photo   photo"
-            "info   info    photo  photo  photo   photo"
-            "bio    bio     bio    bio    goals   goals"
-            "moti   moti    moti   moti   frust   frust";
+        "quote  quote   photo  photo  photo   photo"
+        "info   info    photo  photo  photo   photo"
+        "bio    bio     bio    bio    goals   goals"
+        "moti   moti    moti   moti   frust   frust";
     }
+    
+} */
 
+@media screen and (max-width: 1720px) {
+    #vince {
+        display: none;
+    }
+}
+
+.temp-wrap {
+    display: flex;
+    /* max-width: 1537px; */
+    justify-content: center;
+    margin-top: 64px;
+    background: var(--gradient-3);
+    padding: 0 24px 24px 24px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
 }
 
 @media screen and (max-width: 400px) {
@@ -960,12 +970,6 @@ nav div a {
     .info ul li {
         font-size: 13px;
     }
-}
-
-.personas__buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 64px 0 32px 0;
 }
 
 .persona blockquote {
@@ -993,6 +997,7 @@ nav div a {
     max-height: 300px;
     object-fit: cover;
     object-position: top;
+    margin: -24px 0 0 -24px;
 }
 
 .persona li {

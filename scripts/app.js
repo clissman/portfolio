@@ -1,27 +1,5 @@
 
 
-let personas = document.querySelectorAll('.persona')
-let buttons  = document.querySelectorAll('.personas__buttons button')
-
-function changePersona(persona) {
-    let i = persona.id || persona.innerHTML.toLowerCase()
-
-    buttons.forEach(b => {
-        if (i != b.innerHTML.toLowerCase()) {
-            b.classList.add('inactive')
-        } else {
-            b.classList.remove('inactive')
-        }
-    })
-    personas.forEach(p => {
-        if (p.id != i) {
-            p.style.display='none'
-        } else {
-            p.style.display='grid'
-        }
-    })
-}
-
 let colors = document.querySelectorAll('.colors__grid')
 let tooltip = document.createElement('div')
 
@@ -53,18 +31,19 @@ colors.forEach(c => c.addEventListener('mouseout', removeTooltip))
 
 let mobileMenu = document.querySelector('.mobile-menu')
 let mobileMenuLinks = document.querySelector('.mobile-menu__links')
+let hamburger = document.querySelector('.hamburger')
 
 
 let menuOpen = false;
 
 function openMenu() {
     if (!menuOpen) {
-        event.target.classList.add('hamburger--active')
+        hamburger.classList.add('hamburger--active')
         mobileMenu.classList.add('active-1')
         mobileMenuLinks.classList.add('active-2')
     } else {
-        event.target.classList.remove('hamburger--active')
-        mobileMenu.classList.remove('active-1')
+        hamburger.classList.remove('hamburger--active')
+        mobileMenu.classList.remove('active-1', 'initial')
         mobileMenuLinks.classList.remove('active-2')
     }
     menuOpen = !menuOpen
