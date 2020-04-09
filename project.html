@@ -21,9 +21,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">
-                <img class="logo" src="images/logo_large.svg" alt="Chris Lissman's logo">
-            </a>
+            <a href="index.html"><img class="logo" src="images/logo_large.svg" alt="Chris Lissman's logo"></a>
             <div class='menu'>
                 <a href="index.html">Work</a>
                 <a href="about.html">About</a>
@@ -33,10 +31,10 @@
             <div class="hamburger" onclick="openMenu()"><div></div></div>
             <div class="mobile-menu initial">
                 <div class="mobile-menu mobile-menu__links">
-                    <a onclick='instantHide()' class='smallest' href="index.html">Work</a>
-                    <a onclick='instantHide()' class='smallest' href="about.html">About</a>
-                    <a onclick='instantHide()' class='smallest' href="chris_lissman_resume.pdf" target="_blank" rel="noopener">Resume</a>
-                    <a onclick='instantHide()' class='smallest' href="mailto:clissmanux@gmail.com" target="_blank" rel="noopener">Email me</a>
+                    <a class='smallest' href="index.html">Work</a>
+                    <a class='smallest' href="about.html">About</a>
+                    <a class='smallest' href="chris_lissman_resume.pdf" target="_blank" rel="noopener">Resume</a>
+                    <a class='smallest' href="mailto:clissmanux@gmail.com" target="_blank" rel="noopener">Email me</a>
                 </div>
             </div>
         </nav>
@@ -44,52 +42,48 @@
     <main class='project'>
         <section class="hero">
             <img class='full' src="images/cira/hero.webp" alt="Three cellphones showing Cira's sign in screen and file view screens">
-            <img class="hero_title" src="images/cira/hero_title.svg" alt="Cira, Cloud Storage for Designers">
+            <img class="hero__title" src="images/cira/hero_title.svg" alt="Cira, Cloud Storage for Designers">
         </section>
         <section>
-                <div class="sizing">
-                    <div class="project_title">
-                        <h1 class="larger">Cira</h1>
-                        <h2 class='smallest'>Cloud Storage for Designers</h2>
-                    </div>
-                    <div class='project-details'>
-                        <ul class='details--quarter'>
-                            <li><span class='overline title'>Role</span>
-                            <ul>
-                                <li>UX/UI Designer</li>
+            <div class="sizing project-details">
+                <h1 class="larger project-details__title">Cira</h1>
+                <h2 class='smallest project-details__title'>Cloud Storage for Designers</h2>
+                <ul class='details--quarter'>
+                    <li><span class='overline title'>Role</span>
+                    <ul>
+                        <li>UX/UI Designer</li>
+                    </ul>
+                </ul>
+                <ul class='details--quarter'>
+                    <li class><span class='overline title'>Tools</span>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe CC</li>
+                            <li>G Suite</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class='details--whole'>
+                    <li><span class='overline title'>Deliverables</span>
+                        <div class='details--half'>
+                            <ul class='details--quarter'>
+                                <li>Hi-Fidelity Prototype</li>
+                                <li>Personas</li>
+                                <li>User Flows</li>
+                                <li>Competitive Analysis</li>
+                                <li>Logo</li>
                             </ul>
-                        </ul>
-                        <ul class='details--quarter'>
-                            <li class><span class='overline title'>Tools</span>
-                                <ul>
-                                    <li>Figma</li>
-                                    <li>Adobe CC</li>
-                                    <li>G Suite</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class='details--whole'>
-                            <li><span class='overline title'>Deliverables</span>
-                                <div class='details--half'>
-                                    <ul class='details--quarter'>
-                                        <li>Hi-Fidelity Prototype</li>
-                                        <li>Personas</li>
-                                        <li>User Flows</li>
-                                        <li>Competitive Analysis</li>
-                                        <li>Logo</li>
-                                    </ul>
-                                    <ul class='details--quarter'>
-                                        <li>Wireframes</li>
-                                        <li>Design System</li>
-                                        <li>User Surveys</li>
-                                        <li>Brand Guidelines</li>
-                                        <li>User Stories</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                            <ul class='details--quarter'>
+                                <li>Wireframes</li>
+                                <li>Design System</li>
+                                <li>User Surveys</li>
+                                <li>Brand Guidelines</li>
+                                <li>User Stories</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section>
             <div class="sizing">
@@ -274,7 +268,6 @@
                             </ul>
                         </li>
                     </ul>
-                    
                 </article>
                 <a href="https://docs.google.com/document/d/1F159_5qDThcHDVQX1hqBsS9YDDE2Yq5O6mTpV8WCER4/edit?usp=sharing" target="_blank" rel="noopener" class="button">View Competitive Analysis</a>
             </div>
@@ -286,7 +279,7 @@
                 user personas. All three personas are young, moderately to very computer savvy, and are at least familiar with cloud
                 storage. Their three crucial <strong>problems were permission settings, organization, and versioning</strong>.</p>
             </div>
-            <div class="temp-wrap"> 
+            <div class="personas"> 
                 <article class='persona' id='wendy'>
                     <div class="name">
                         <h4 class='smaller'>Wendy D.</h4>
@@ -297,17 +290,13 @@
                     <div class="info">
                         <ul class='body_two'>
                             <li>Age</li>
-                            <li>Vocation</li>
+                            <li>Profession</li>
                             <li>Location</li>
-                            <li>Gender</li>
-                            <li>Tier</li>
                         </ul>
                         <ul class='body_two'>
                             <li>25</li>
                             <li>UX Designer</li>
                             <li>Seattle, WA</li>
-                            <li>Female</li>
-                            <li>Expert</li>
                         </ul>
                     </div>
                     <div class="bio">
@@ -349,17 +338,13 @@
                     <div class="info">
                         <ul class='body_two'>
                             <li>Age</li>
-                            <li>Vocation</li>
+                            <li>Profession</li>
                             <li>Location</li>
-                            <li>Gender</li>
-                            <li>Tier</li>
                         </ul>
                         <ul class='body_two'>
                             <li>30</li>
                             <li>Video Editor</li>
                             <li>Salem, VA</li>
-                            <li>Male</li>
-                            <li>Expert</li>
                         </ul>
                     </div>
                     <div class="bio">
@@ -400,17 +385,13 @@
                     <div class="info">
                         <ul class='body_two'>
                             <li>Age</li>
-                            <li>Vocation</li>
+                            <li>Profession</li>
                             <li>Location</li>
-                            <li>Gender</li>
-                            <li>Tier</li>
                         </ul>
                         <ul class='body_two'>
                             <li>28</li>
                             <li>Doctor</li>
                             <li>Turin, Italy</li>
-                            <li>Male</li>
-                            <li>Intermediate</li>
                         </ul>
                     </div>
                     <div class='bio'>

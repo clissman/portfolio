@@ -71,7 +71,6 @@ section {
     margin-bottom: 64px;
 }
 
-
 canvas {
     margin-bottom: 32px;
 }
@@ -96,12 +95,12 @@ canvas {
     margin-bottom: -32px;
 }
 
-.hero_title {
+.hero__title {
     display: none;
 }
 
 @media screen and (min-width: 900px) {
-    .hero_title {
+    .hero__title {
         bottom: 25%;
         display: block;
         left: 8%;
@@ -109,36 +108,35 @@ canvas {
         position: absolute;
     }
 
-    .project_title {
+    .project-details__title {
         display: none;
     }
-}
-
-.margin--32-top {
-    margin: 32px 0;
 }
 
 .margin--16-top {
     margin: 16px 0;
 }
 
+.margin--32-top {
+    margin: 32px 0;
+}
+
 .margin--64-top {
     margin: 64px 0;
+}
+
+.img--nudge-top {
+    margin-top: 64px;
 }
 
 .container__flexbox--6 {
     display: flex;
     justify-content: space-between;
-
 }
 
 .container__flexbox--6 img {
     /* height: 521px; */
     max-width: inherit;
-}
-
-.img--nudge-top {
-    margin-top: 64px;
 }
 
 @media screen and (min-width: 600px) {
@@ -151,15 +149,14 @@ canvas {
     max-width: 592px;
 }
 
-.project_title h1 {
+h1.project_title{
     font-weight: 500;
     margin-bottom: 16px;
 }
 
-.project_title h2 {
+h2.project_title {
     margin-top: -16px;
     font-size: 27px;
-    /* Force size during 600px - 900px media query gap */
 }
 
 .spacer-top-32px {
@@ -202,7 +199,7 @@ canvas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 64px 24px;
+    padding: 16px 24px;
     background: var(--gradient-2);
 }
 
@@ -307,8 +304,6 @@ li {
     letter-spacing: -0.1px;
 }
 
-
-
 .smaller {
     font-size: 35px;
     font-style: normal;
@@ -381,8 +376,6 @@ li {
     text-transform: uppercase;
 }
 
-
-
 .graph__title {
     color: var(--grey-base);
     font-size: 16px;
@@ -435,6 +428,7 @@ a.button--secondary {
     background: white;
     border: 1px solid var(--grey-darkest);
     color: var(--grey-darkest);
+    margin-left: 0;
 }
 
 a.button--secondary:hover {
@@ -549,7 +543,7 @@ tr:last-child {
 
 /* --------------------------------------------- Sections: Intro ---------------------------------------------*/
 
-.intro {
+.intro > * {
     max-width: 410px;
 }
 
@@ -564,7 +558,7 @@ tr:last-child {
 }
 
 @media screen and (min-width: 600px) {
-    .intro {
+    .intro > * {
         margin-left: 100px;
     }
 
@@ -577,7 +571,6 @@ tr:last-child {
         font-size: 27px;
     }
 }
-
 
 /* --------------------------------------------- Sections: Work ---------------------------------------------*/
 
@@ -607,13 +600,11 @@ tr:last-child {
 
 /* --------------------------------------------- Sections: Skills ---------------------------------------------*/
 
-
-
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 32px 0 -32px;
+    margin: 32px auto -32px;
     flex-basis: fill;
 }
 
@@ -621,8 +612,7 @@ tr:last-child {
     flex-basis: 100%;
 }
 
-
-.skills div {
+.skills ul {
     flex-basis: 50%;
     margin-bottom: 32px;
 }
@@ -632,7 +622,7 @@ tr:last-child {
 }
 
 @media screen and (min-width: 780px) {
-    .skills div {
+    .skills ul {
         flex-basis: auto;
     }
 
@@ -641,10 +631,20 @@ tr:last-child {
     }
 }
 
+.work h2 {
+    align-self: flex-start;
+}
+
 /* --------------------------------------------- Sections: Navigation ---------------------------------------------*/
 
 main {
-    margin-top: 192px;
+    margin-top: 128px;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        margin-top: 192px;
+    }
 }
 
 header {
@@ -659,7 +659,7 @@ header {
 nav {
     align-items: center;
     display: flex;
-    height: 128px;
+    height: 64px;
     justify-content: space-between;
     margin: 0 24px;
     max-width: 1200px;
@@ -670,11 +670,6 @@ nav a {
     color: var(--grey-darkest);
     font-size: 15px;
     font-weight: 400;
-}
-
-.menu {
-    margin-left: 8px;
-
 }
 
 .photo {
@@ -706,6 +701,10 @@ nav div a {
         padding: 4px;
         margin-left: 16px;
     }
+
+    nav {
+        height: 128px;
+    }
 }
 
 .hamburger {
@@ -723,6 +722,7 @@ nav div a {
     .hamburger {
         display: block;
     }
+
 }
 
 .mobile-menu {
@@ -732,7 +732,7 @@ nav div a {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 128px;
+    margin-top: 64px;
     transition: 0.25s 0.4s ease-in;
     visibility: hidden;
     opacity: 0;
@@ -780,7 +780,7 @@ nav div a {
 
 
 .hamburger {
-    margin: 1em;
+    margin-right: -12px;
     width: 24px;
 }
 
@@ -919,7 +919,6 @@ nav div a {
     grid-gap: 16px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto min-content;
-    /* width: 100%; */
     grid-template-areas: "photo photo name name"
         "photo photo quote quote"
         "photo photo info info"
@@ -931,28 +930,14 @@ nav div a {
     margin-top: 32px;
 }
 
-/* 
-@media screen and (min-width: 600px) {
-    .persona {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: "name   name    photo  photo  photo   photo"
-        "quote  quote   photo  photo  photo   photo"
-        "info   info    photo  photo  photo   photo"
-        "bio    bio     bio    bio    goals   goals"
-        "moti   moti    moti   moti   frust   frust";
-    }
-    
-} */
-
 @media screen and (max-width: 1720px) {
     #vince {
         display: none;
     }
 }
 
-.temp-wrap {
+.personas {
     display: flex;
-    /* max-width: 1537px; */
     justify-content: center;
     margin-top: 64px;
     background: var(--gradient-3);
@@ -1059,6 +1044,10 @@ nav div a {
     margin-bottom: 0;
 }
 
+.project-details h1, .project-details h2 {
+    flex-basis: 100%;
+}
+
 .details--whole {
     flex-basis: 100%;
 }
@@ -1123,7 +1112,7 @@ nav div a {
 .logo {
     width: 36px;
     padding: 12px;
-    margin-left: -2px;
+    margin-left: -12px;
 }
 
 @media screen and (min-width: 600px) {
