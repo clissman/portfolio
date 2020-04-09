@@ -756,13 +756,13 @@ nav div a {
 
 .active-1 {
     visibility: visible;
-    opacity: 100;
+    opacity: 1;
     transition: 0.25s ease-out;
 }
 
 .active-2 {
     visibility: visible;
-    opacity: 100;
+    opacity: 1;
     transition: opacity 0.25s 0.40s ease-out;
 }
 
