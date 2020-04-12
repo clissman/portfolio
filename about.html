@@ -44,7 +44,11 @@
     </header>
     <main>
         <div class="sizing sizing--wide two-columns">
-            <img class='photo' src="images/chris_lissman_picture.webp" alt="Chris Lissman at Mesa Verde National Park">
+            <picture class='photo'>
+                <source srcset="images/chris_lissman_picture.webp" type="image/webp">
+                <source srcset="images/chris_lissman_picture.jpg" type="image/jpeg">
+                <img src="images/chris_lissman_picture.jpg" alt="Chris Lissman at Mesa Verde National Park">
+            </picture>
             <section class='about'>
                 <h1 class='smaller'>Hi, I'm Chris</h1>
 
