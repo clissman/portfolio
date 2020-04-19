@@ -676,6 +676,7 @@ nav a {
     align-self: center;
     margin-bottom: 32px;
     order: 2;
+    display: block;
 }
 
 .photo source, .photo img {
@@ -755,6 +756,7 @@ nav div a {
     height: 30vh;
     margin-top: 64px;
     transition: 0.25s ease-in;
+    visibility: hidden;
     opacity: 0;
 }
 
