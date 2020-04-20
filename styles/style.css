@@ -149,7 +149,7 @@ canvas {
     max-width: 592px;
 }
 
-h1.project_title{
+h1.project_title {
     font-weight: 500;
     margin-bottom: 16px;
 }
@@ -543,7 +543,7 @@ tr:last-child {
 
 /* --------------------------------------------- Sections: Intro ---------------------------------------------*/
 
-.intro > * {
+.intro>* {
     max-width: 410px;
 }
 
@@ -558,7 +558,7 @@ tr:last-child {
 }
 
 @media screen and (min-width: 600px) {
-    .intro > * {
+    .intro>* {
         margin-left: 100px;
     }
 
@@ -679,7 +679,8 @@ nav a {
     display: block;
 }
 
-.photo source, .photo img {
+.photo source,
+.photo img {
     max-width: 492px;
     min-width: 320px;
 }
@@ -933,12 +934,31 @@ nav div a {
     grid-template-areas: "photo photo name name"
         "photo photo quote quote"
         "photo photo info info"
-        "moti   moti     bio    bio"
+        "bio bio bio bio"
+        "moti   moti     moti    moti"
         "goals  goals   frust  frust";
     background: white;
     padding: 24px;
     max-width: 502px;
     margin-top: 32px;
+}
+
+@media screen and (min-width: 600px) {
+    .persona {
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto min-content;
+        grid-template-areas: "photo photo name name"
+            "photo photo quote quote"
+            "photo photo info info"
+            "bio   bio    moti moti"
+            "goals  goals   frust  frust";
+        background: white;
+        padding: 24px;
+        max-width: 502px;
+        margin-top: 32px;
+    }
 }
 
 @media screen and (max-width: 1720px) {
@@ -1055,7 +1075,8 @@ nav div a {
     margin-bottom: 0;
 }
 
-.project-details h1, .project-details h2 {
+.project-details h1,
+.project-details h2 {
     flex-basis: 100%;
 }
 
