@@ -56,5 +56,3 @@ function openMenu() {
     menuOpen = !menuOpen
 }
 
-var image = document.getElementsByClassName('para');
-new simpleParallax(image);
