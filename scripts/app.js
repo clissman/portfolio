@@ -3,6 +3,13 @@
 let colors = document.querySelectorAll('.colors__grid')
 let tooltip = document.createElement('div')
 
+let colorSquares = document.querySelectorAll('.colors__grid--color')
+
+
+
+colorSquares.forEach(c => {
+    c.style.background = `#${c.dataset.color}`
+})
 
 
 const mobile = window.matchMedia('(max-width: 600px)');
@@ -12,7 +19,7 @@ function addTooltip() {
     let x = event.clientX
     let y = event.clientY
     const colorName = event.target.dataset.color
-    
+        
     document.body.appendChild(tooltip).classList.add('tooltip')
     if (colorName == undefined) document.body.removeChild(tooltip)
     tooltip.innerHTML = `#${colorName}`;
@@ -22,7 +29,7 @@ function addTooltip() {
 
 function removeTooltip() {
     let visible = document.getElementsByClassName('tooltip').length
-    if (visible ) document.body.removeChild(tooltip)
+    if (visible) document.body.removeChild(tooltip)
 }
 
 colors.forEach(c => c.addEventListener('mousemove', addTooltip))
@@ -48,3 +55,6 @@ function openMenu() {
     }
     menuOpen = !menuOpen
 }
+
+var image = document.getElementsByClassName('para');
+new simpleParallax(image);
