@@ -1,5 +1,3 @@
-
-
 let colors = document.querySelectorAll('.colors__grid')
 let tooltip = document.createElement('div')
 

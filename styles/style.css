@@ -389,12 +389,20 @@ li {
     }
 }
 
+
 .overline {
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.4px;
     margin-bottom: 4px;
 }
+
+@media screen and (max-width: 600px) {
+    .overline {
+        font-size: 13px;
+    }
+}
+
 
 .title {
     text-transform: uppercase;
