@@ -890,7 +890,10 @@ nav div a {
     margin: 32px 0;
 }
 
-/* These slyest page arrangements? (9, 5, 6) */
+.competitive_analysis .container__flexbox--6 div:first-child {
+    margin-right: 16px;
+}
+
 
 /* --------------------------------------------- Section Colors ---------------------------------------------*/
 
@@ -1284,3 +1287,4 @@ footer ul {
         max-width: 100%;
     }
 }
+
