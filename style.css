@@ -25,6 +25,11 @@
     
 /* Type */
 
+.mask {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+
 p {
     font-style: normal;
     font-weight: normal;
@@ -98,6 +103,8 @@ img[src$=".png"]{
     width: 100%;
     min-height: 400px;
 }   
+
+
 
 /* Structure */
 
